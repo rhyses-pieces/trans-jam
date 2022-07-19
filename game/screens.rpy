@@ -719,6 +719,11 @@ screen preferences():
             hbox:
                 box_wrap True
 
+                vbox:
+                    style_prefix "radio"
+                    label _("Text")
+                    textbutton _("Accessibility") action ShowMenu("accessibility")
+
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:
@@ -858,6 +863,15 @@ style slider_button_text:
 
 style slider_vbox:
     xsize 450
+
+## Keymap ####################################################
+##
+## this is to remap keys to use a custom accessibility menu and then some
+##
+## https://www.renpy.org/doc/html/screens.html#key
+
+# screen keymap_screen():
+#     key "accessibility" action ShowMenu('accessibility')
 
 
 ## History screen ##############################################################
@@ -1008,6 +1022,29 @@ style history_return_button:
     align(1.0,1.0)
     yoffset 100
 
+################################################################################
+##  Accessibility Menu
+################################################################################
+
+screen accessibility():
+
+    tag menu
+
+    use game_menu(_("Preferences"), scroll="viewport"):
+        vbox:
+            style_prefix "check"
+            label _("Accessibility")
+            textbutton _("Sound Captions") action ToggleVariable("persistent.sound_captions")
+            textbutton _("Image Captions") action ToggleVariable("persistent.image_captions")
+
+            # Self-voicing does not work on smartphone devices, so this option only shows if the user is playing on a PC.
+            if renpy.variant("pc"):
+                textbutton _("Self-Voicing") action Preference("self voicing", "toggle")
+
+            # textbutton _("More Options...") action Show("_accessibility")
+            textbutton ("") #Adds space between accessibility options and return button
+
+            textbutton _("Return") action ShowMenu("preferences")
 
 ## Help screen #################################################################
 ##

@@ -1,7 +1,3 @@
-.vscode/tasks.json
-bin/
-console/
-
 game/saves
 
 **/*.rpyc
