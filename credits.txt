@@ -9,3 +9,6 @@ Codex screen https://skolaztika.itch.io/renpy-codex-screen
 Separate History screen https://tofurocks.itch.io/renpy-history
 
 auto highlight https://github.com/SoDaRa/Auto-Highlight
+
+caption tool https://npckc.itch.io/caption-tool-for-renpy
+

@@ -48,8 +48,8 @@ define gui.muted_color = '#3d5166'
 define gui.hover_muted_color = '#5b7a99'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = '#a98869'
+define gui.interface_text_color = '#a98869'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -58,7 +58,7 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "fonts/brassmono.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/brassmono_comfortable.otf"
+define gui.name_text_font = "fonts/brassmono.otf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "fonts/brassmono.otf"
@@ -368,7 +368,7 @@ define gui.nvl_list_length = 6
 
 ## The height of an NVL-mode entry. Set this to None to have the entries
 ## dynamically adjust height.
-define gui.nvl_height = 115
+define gui.nvl_height = None
 
 ## The spacing between NVL-mode entries when gui.nvl_height is None, and between
 ## NVL-mode entries and an NVL-mode menu.

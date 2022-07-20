@@ -22,72 +22,48 @@ init python:
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define protag = Character('Jonghyun', color="#afcfb3", callback=[protagBleep,name_callback], cb_name="protag")
-define li = Character('Noel', color="#f171af", callback=[liBleep, name_callback], cb_name="li")
-define narrator = Character(callback=name_callback, cb_name=None)
+define protag = Character('Jonghyun', image="protag", color="#afcfb3", callback=[protagBleep,name_callback], cb_name="protag")
+define li = Character('Noel', image="li", color="#f171af", callback=[liBleep, name_callback], cb_name="li")
+define narrator = Character(kind=nvl, callback=name_callback, cb_name=None)
 
-# define sprites for subtle highlights
+# define sprites for auto highlights
 image li angry = At('li angry.png', sprite_highlight('li'))
 image li blush = At('li blush.png', sprite_highlight('li'))
+image li closedeyes = At('li closedeyes.png', sprite_highlight('li'))
 image li default = At('li default.png', sprite_highlight('li'))
 image li happy = At('li happy.png', sprite_highlight('li'))
 image li sad = At('li sad.png', sprite_highlight('li'))
 image li smile = At('li smile.png', sprite_highlight('li'))
+image li surprise = At('li surprise.png', sprite_highlight('li'))
 image li think = At('li think.png', sprite_highlight('li'))
 
 image protag angry = At('protag angry.png', sprite_highlight('protag'))
 image protag blush = At('protag blush.png', sprite_highlight('protag'))
+image protag closedeyes = At('protag closedeyes.png', sprite_highlight('protag'))
 image protag default = At('protag default.png', sprite_highlight('protag'))
 image protag happy = At('protag happy.png', sprite_highlight('protag'))
 image protag sad = At('protag sad.png', sprite_highlight('protag'))
 image protag smile = At('protag smile.png', sprite_highlight('protag'))
+image protag surprise = At('protag surprise.png', sprite_highlight('protag'))
 image protag think = At('protag think.png', sprite_highlight('protag'))
 
 # The game starts here.
 
-label start:
+label start():
+    # initialize conditional codex entry variables here
+    $ bob = False
+    $ boblooks = False
+    $ bobbackground = False
 
-    scene bg bedroom
-    show protag smile
+    stop music fadeout 1.0
 
-    protag "You've created a new Ren'Py game."
+    call scene01
 
-    show protag:
-        xzoom -1.0
+    call scene02
 
-    protag "Once you add a story, pictures, and music, you can release it to the world!"
+    return
 
-    show protag default at left
-    show li default at right
-    
-    li "Oh hey, what's up?"
-    
-    menu:
-        "I've been..."
-        "... alright.":
-            jump neutral
-        "... great!":
-            jump happy
-
-label happy:
-    show protag happy
-    protag "Feeling great!"
-
-    show li happy
-    li "That's awesome!"
-    
-    jump end
-
-label neutral:
-    show protag smile
-    protag "Nothing much. You?"
-    
-    show li smile
-    li "Doing good, thanks!"
-
-    jump end
-
-label end:
+label end():
     show protag smile
     show li smile
     protag "I guess we can end it here."
