@@ -1,7 +1,7 @@
-
 ##-----------------------------------------------
 ##-------CODEX ENTRY NAVIGATION------------------
 ##-----------------------------------------------
+
 screen people_nav():
     add "gui/overlay/game_menu.png"
 
@@ -23,19 +23,13 @@ screen people_nav():
             if bob:
                 textbutton "Bob" action ShowMenu("bob")
 
-            textbutton "Lew Ciszek" action NullAction()
-            textbutton "Aidan Evans" action NullAction()
-            textbutton "Wincenty Borkowski" action NullAction()
-            textbutton "Sascha Windisch" action NullAction()
-            textbutton "Kelemen Bence" action NullAction()
-            textbutton "Biró Erik" action NullAction()
-
     textbutton "Return to categories" action ShowMenu("category_welcome") yoffset 950 xoffset 25
     textbutton "Return" action Return() yoffset 1000 xoffset 25
 
 ##-----------------------------------------------
 ##-------------CODEX WELCOME---------------------
 ##-----------------------------------------------
+
 screen people_welcome():
     ##This is the "People" category's welcome page. This is the first screen players see after they select a category.
 
@@ -49,12 +43,9 @@ screen people_welcome():
             xoffset 200
             text _("In this category you can read about all the wonderful characters in this game! (And also Bob)")
 
-
-
 ##-----------------------------------------------
 ##----------ENTRIES START HERE-------------------
 ##-----------------------------------------------
-
 
 screen zack():
 
@@ -74,7 +65,6 @@ screen zack():
         mousewheel True
         draggable True
         pagekeys True
-
 
         vbox:
             #You write the actual entry here. I suggest you split your text into smaller text _p sections, otherwise the text might overlap with
@@ -103,7 +93,7 @@ screen zack():
             {p}Suspendisse sit amet luctus turpis. Nullam felis orci, maximus luctus aliquam eget,
             cursus nec lectus.Donec sollicitudin auctor urna, non rutrum sem aliquet et. Duis dignissim molestie luctus.""")
 
-##--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##-----------------------------------------------------------------------------
 
 screen nelson():
 
@@ -134,7 +124,8 @@ screen nelson():
             lacinia mi eros, in maximus neque sagittis vitae. Cras vestibulum cursus nulla eu rhoncus. Sed hendrerit faucibus dignissim. Vivamus
             sed mattis dui. Nunc eu finibus sem. Morbi malesuada lectus nec arcu auctor fermentum. """)
 
-##--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##-----------------------------------------------------------------------------
+
 screen bob():
 
     tag menu

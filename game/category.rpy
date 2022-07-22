@@ -5,10 +5,10 @@
 #   -that brings them to the welcome page/main page of the selected category. Ex.: people_welcome in people.rpy
 #   -there they can select an entry to read.
 
-
 ##-----------------------------------------------
 ##-------CATEGORY NAVIGATION---------------------
 ##-----------------------------------------------
+
 screen category_nav():
 
     #This is where we create the menu where we can select the category.
@@ -44,6 +44,7 @@ screen category_nav():
 ##-----------------------------------------------
 ##-------------CODEX WELCOME---------------------
 ##-----------------------------------------------
+
 screen category_welcome():
     #This is the "Welcome screen", the first screen the player sees when they go into the codex menu.
 
@@ -61,7 +62,6 @@ screen category_welcome():
                     It is because setting those up would involve a lot of unnecessary copy-paste work. Same goes for some entries in the
                     'People' category. Start the game to unlock the hidden entries.""")
             #text _p("""Welcome to the codex!""")
-
 
             #Really short text might not be centered correctly, you have to adjust the xoffset.
 

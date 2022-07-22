@@ -12,6 +12,9 @@ init python:
     gui.init(1280, 720)
 
 
+# Customize keymap
+# remove accessibility menu because it introduces problematic options
+$ config.keymap['accessibility'].remove('K_a')
 
 ################################################################################
 ## GUI Configuration Variables

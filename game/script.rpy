@@ -22,9 +22,11 @@ init python:
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define protag = Character('Jonghyun', image="protag", color="#afcfb3", callback=[protagBleep,name_callback], cb_name="protag")
-define li = Character('Noel', image="li", color="#f171af", callback=[liBleep, name_callback], cb_name="li")
+define protag = Character('Jonghyun', image="protag", color="#79be9e", callback=[protagBleep,name_callback], cb_name="protag")
+define li = Character('[liName]', image="li", color="#f171af", callback=[liBleep, name_callback], cb_name="li")
 define narrator = Character(kind=nvl, callback=name_callback, cb_name=None)
+
+image black = Solid("#000")
 
 # define sprites for auto highlights
 image li angry = At('li angry.png', sprite_highlight('li'))
@@ -54,6 +56,8 @@ label start():
     $ bob = False
     $ boblooks = False
     $ bobbackground = False
+    $ liCodex = False
+    $ liName = "Stranger"
 
     stop music fadeout 1.0
 

@@ -302,30 +302,28 @@ screen navigation():
 
         else:
 
+            textbutton _("Codex") action ShowMenu("category_welcome")
+
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Codex") action ShowMenu("category_welcome")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
-
-        textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
+
+        textbutton _("Preferences") action ShowMenu("preferences")
+
+        if not main_menu:
+
+            textbutton _("Main Menu") action MainMenu()
 
         if renpy.variant("pc"):
 
@@ -344,6 +342,42 @@ style navigation_button:
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
 
+
+## Custom Title Menu ###########################################################
+## 
+## Customizing the menu in the title screen with image buttons!
+## 
+## https://www.renpy.org/doc/html/screens.html#imagebutton
+
+screen title_menu():
+
+    style_prefix "title_menu"
+
+    hbox:
+        
+        imagebutton auto "gui/start %s.png" action Start() alt _("Start")
+        imagebutton auto "gui/load %s.png" action ShowMenu("load") alt _("Load")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            imagebutton auto "gui/help %s.png" action ShowMenu("help") alt _("Help")
+
+        imagebutton auto "gui/pref %s.png" action ShowMenu("preferences") alt _("Options")
+        imagebutton auto "gui/quit %s.png" action Quit(confirm=True) alt _("Quit")
+
+style title_menu_hbox:
+    yoffset -10
+    xsize 500
+    ysize 150
+    box_wrap True
+    align (0.5, 0.5)
+    spacing gui.navigation_spacing
+    box_wrap_spacing 20
+
+style title_menu_imagebutton:
+    hover_sound "audio/select.ogg"
+    activate_sound "audio/click.ogg"
 
 ## Main Menu screen ############################################################
 ##
@@ -364,7 +398,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    use title_menu
 
     if gui.show_name:
 
@@ -388,7 +422,7 @@ style main_menu_frame:
     xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -723,9 +757,14 @@ screen preferences():
                 box_wrap True
 
                 vbox:
-                    style_prefix "radio"
-                    label _("Text")
-                    textbutton _("Accessibility") action ShowMenu("accessibility")
+                    style_prefix "check"
+                    label _("Accessibility")
+                    textbutton _("Sound Captions") action ToggleVariable("persistent.sound_captions")
+                    textbutton _("Image Captions") action ToggleVariable("persistent.image_captions")
+
+                    # Self-voicing does not work on smartphone devices, so this option only shows if the user is playing on a PC.
+                    if renpy.variant("pc"):
+                        textbutton _("Self-Voicing") action Preference("self voicing", "toggle")
 
                 if renpy.variant("pc") or renpy.variant("web"):
 
@@ -866,16 +905,6 @@ style slider_button_text:
 
 style slider_vbox:
     xsize 450
-
-## Keymap ####################################################
-##
-## this is to remap keys to use a custom accessibility menu and then some
-##
-## https://www.renpy.org/doc/html/screens.html#key
-
-# screen keymap_screen():
-#     key "accessibility" action ShowMenu('accessibility')
-
 
 ## History screen ##############################################################
 ##
@@ -1025,30 +1054,6 @@ style history_return_button:
     align(1.0,1.0)
     yoffset 100
 
-################################################################################
-##  Accessibility Menu
-################################################################################
-
-screen accessibility():
-
-    tag menu
-
-    use game_menu(_("Preferences"), scroll="viewport"):
-        vbox:
-            style_prefix "check"
-            label _("Accessibility")
-            textbutton _("Sound Captions") action ToggleVariable("persistent.sound_captions")
-            textbutton _("Image Captions") action ToggleVariable("persistent.image_captions")
-
-            # Self-voicing does not work on smartphone devices, so this option only shows if the user is playing on a PC.
-            if renpy.variant("pc"):
-                textbutton _("Self-Voicing") action Preference("self voicing", "toggle")
-
-            # textbutton _("More Options...") action Show("_accessibility")
-            textbutton ("") #Adds space between accessibility options and return button
-
-            textbutton _("Return") action ShowMenu("preferences")
-
 ## Help screen #################################################################
 ##
 ## A screen that gives information about key and mouse bindings. It uses other
@@ -1130,9 +1135,9 @@ screen keyboard_help():
         label "V"
         text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
-    hbox:
-        label "Shift+A"
-        text _("Opens the accessibility menu.")
+    # hbox:
+    #     label "Shift+A"
+    #     text _("Opens the accessibility menu.")
 
 
 screen mouse_help():
@@ -1171,7 +1176,6 @@ screen gamepad_help():
     hbox:
         label _("Right Shoulder")
         text _("Rolls forward to later dialogue.")
-
 
     hbox:
         label _("D-Pad, Sticks")

@@ -3,6 +3,8 @@ https://ryusuke0215.itch.io/piano-music2 for main menu music
 
 dialogue bleeps https://dmochas-assets.itch.io/dmochas-bleeps-pack
 
+interface sounds https://obsydianx.itch.io/interface-sfx-pack-1
+
 === PROGRAMMING ===
 Codex screen https://skolaztika.itch.io/renpy-codex-screen
 
@@ -12,3 +14,4 @@ auto highlight https://github.com/SoDaRa/Auto-Highlight
 
 caption tool https://npckc.itch.io/caption-tool-for-renpy
 
+animation https://github.com/nyaatrap

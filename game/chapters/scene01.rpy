@@ -22,7 +22,11 @@ label scene01():
     Why wasn't there anyone around?
 
     {clear}
+    """
 
+    show protag closedeyes
+
+    narrator """
     Whatever, it's way too early for this kind of nonsense.
     
     Grumbling, [protag] decides to head back to bed. 
@@ -36,6 +40,6 @@ label scene01():
     show protag at right
     show li default at left
 
-    li "Hi."
+    li "Hi." (who_color="#575c69")
 
     return
