@@ -1,13 +1,13 @@
 === MUSIC ===
-https://ryusuke0215.itch.io/piano-music2 for main menu music
+main menu music https://ryusuke0215.itch.io/piano-music2
+
+cafe bgm https://lolurio.itch.io/slice-of-anime-music
 
 dialogue bleeps https://dmochas-assets.itch.io/dmochas-bleeps-pack
 
-interface sounds https://obsydianx.itch.io/interface-sfx-pack-1
+interface sounds https://souptonic.itch.io/souptonic-sfx-pack-1-ui-sounds
 
 === PROGRAMMING ===
-Codex screen https://skolaztika.itch.io/renpy-codex-screen
-
 Separate History screen https://tofurocks.itch.io/renpy-history
 
 auto highlight https://github.com/SoDaRa/Auto-Highlight

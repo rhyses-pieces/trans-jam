@@ -23,8 +23,9 @@ init python:
 # name of the character.
 
 define protag = Character('Jonghyun', image="protag", color="#79be9e", callback=[protagBleep,name_callback], cb_name="protag")
-define li = Character('[liName]', image="li", color="#f171af", callback=[liBleep, name_callback], cb_name="li")
-define narrator = Character(kind=nvl, callback=name_callback, cb_name=None)
+define li = Character('Noel', image="li", color="#f171af", callback=[liBleep, name_callback], cb_name="li")
+define narrator = Character(callback=name_callback, cb_name=None)
+define generic = Character('[genericName]', color="#575c69", callback=[genericBleep,name_callback], cb_name=None)
 
 image black = Solid("#000")
 
@@ -52,12 +53,7 @@ image protag think = At('protag think.png', sprite_highlight('protag'))
 # The game starts here.
 
 label start():
-    # initialize conditional codex entry variables here
-    $ bob = False
-    $ boblooks = False
-    $ bobbackground = False
-    $ liCodex = False
-    $ liName = "Stranger"
+    $ genericName = ""
 
     stop music fadeout 1.0
 
