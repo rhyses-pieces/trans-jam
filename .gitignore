@@ -1,6 +1,7 @@
 game/saves
 
 **/*.rpyc
+**/*.rpyc.bak
 **/*.rpa
 **/*.rpymc
 **/cache

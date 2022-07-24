@@ -15,6 +15,15 @@ init offset = -3
 define move_time = 0.5
 define move_size = 32
 
+transform move_center:
+    ease move_time xalign 0.5
+
+transform move_left:
+    ease move_time xalign 0.0
+
+transform move_right:
+    ease move_time xalign 1.0
+
 ## Animation that appears from the left.
 transform inL(t=move_time/2, d=move_size):
     alpha .0 xoffset -d
@@ -116,8 +125,8 @@ transform shake(t=move_time, d=move_size):
 ## Please uncomment only if you want to change it.
 
 define flash = Fade(.15, 0, .3, color="#fff")
-#define fade = Fade(.5, 0, .5)
-#define dissolve = Dissolve(0.5)
+define fade = Fade(.5, 0, .5)
+define dissolve = Dissolve(0.5)
 #define pixellate = Pixellate(1.0, 5)
 
 #define vpunch = Move((0, 10), (0, -10), .10, bounce=True, repeat=True, delay=.275)
