@@ -36,8 +36,8 @@ init python:
 
 define protag = Character('Jonghyun', image="protag", color="#79be9e", callback=[protagBleep,name_callback], cb_name="protag")
 define li = Character('Noel', image="li", color="#b22673", callback=[liBleep, name_callback], cb_name="li")
-define qirin = Character('hello', image="qirin", color="#4e6e8f", callback=[qirinBleep,name_callback], cb_name="qirin")
-define reaper = Character('hi', image="reaper", color="#b85b6b", callback=[reapBleep,name_callback], cb_name="reaper")
+define qirin = Character('[qirinName]', image="qirin", color="#4e6e8f", callback=[qirinBleep,name_callback], cb_name="qirin")
+define reaper = Character('[reaperName]', image="reaper", color="#b85b6b", callback=[reapBleep,name_callback], cb_name="reaper")
 define narrator = Character(callback=name_callback, cb_name=None)
 define generic = Character('[genericName]', color="#918196", callback=[genericBleep,name_callback], cb_name=None)
 
@@ -83,12 +83,18 @@ image reaper think = At('reaper think.png', sprite_highlight('reaper'))
 
 label start():
     $ genericName = ""
+    $ qirinName = "Customer"
+    $ reaperName = "Customer"
+    $ truthEnding = 0
+    $ desireEnding = 0
+    $ jokeEnding = 0
 
     stop music fadeout 1.0
 
     call scene01
-
     call scene02
+    call scene03
+    call scene04
 
     return
 
