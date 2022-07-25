@@ -2,7 +2,9 @@ label scene03():
     
     scene bg backroom with wipeleft
 
-    show qirin at inR
+    show qirin hooded at right:
+        xzoom -1.0
+        inR()
     show protag default at offscreenleft
 
     protag "Don't worry, you're safe here! Please, take a seat."
@@ -15,10 +17,13 @@ label scene03():
     narrator "Their name is [qirin], and they come from a family of qirin."
     narrator "Since their kind are known to be creatures of good luck, they usually disguise themself to avoid notice from unsavory characters."
 
-    show qirin at bow
-    show protag:
-        inL
-        bow
+    show qirin at bow with Pause(0.5)
+    show protag at left:
+        xzoom -1.0
+        inL()
+        pause 0.5
+        bow()
+    show protag with Pause(1.5)
     
     protag @ smile "Nice to meet you, [qirin]! So, what brings you here?"
     qirin "Well, you see, I just recently moved out of my parents' house..."
@@ -28,11 +33,11 @@ label scene03():
     qirin "It's driving me insane. I love them and all, but this is too much..."
     protag @ sad "I'm sorry to hear about that."
     protag "So what kind of fortune are you looking for in this situation?"
-    qirin "I guess... I'm wondering if there's a chance if I can work things out with my family."
+    qirin default @ think "I guess... I'm wondering if there's a chance if I can work things out with my family."
     protag "Of course. The way I tell fortunes is a little different than most."
     protag @ smile "First, we start with enjoying a cup of tea."
     protag "What's your favorite kind?"
-    qirin default @ think "Oh! Um... I like matcha tea."
+    qirin  @ think "Oh! Um... I like matcha tea."
     protag "You got it!"
     protag @ blush "Sorry it won't be the powder kind, but I need tea leaves for this to work."
     qirin "No worries."

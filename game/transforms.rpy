@@ -37,15 +37,13 @@ transform inR(t=move_time/2, d=move_size):
 ## Animation that disappears to the left.
 ## hide uses the show image at transform because the at clause cannot be used.
 transform outL(t=move_time/2, d=move_size):
-    on hide:
-        easeout t alpha .0 xoffset -d
-        xoffset 0
+    easeout t alpha .0 xoffset -d
+    xoffset 0
 
 ## Animation that disappears to the right.
 transform outR(t=move_time/2, d=move_size):
-    on hide:
-        easeout t alpha .0 xoffset d
-        xoffset 0
+    easeout t alpha .0 xoffset d
+    xoffset 0
 
 ## Lightly hop animation.
 transform hop(t=move_time/2, d=move_size):
@@ -65,7 +63,7 @@ transform doublehop(t=move_time, d=move_size):
 transform bow(t=move_time, d=move_size):
     alpha 1.0
     ease t/2 yoffset d
-    ease t/2 yoffset 0
+    ease t/2 yoffset 21
 
 ## Animation that sways from side to side twice.
 transform wag(t=move_time, d=move_size):
