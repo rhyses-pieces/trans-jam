@@ -748,95 +748,104 @@ screen preferences():
 
     # comment out below to make preference purely custom
     # use game_menu(_("Preferences"), scroll="viewport"):
+    
+    if main_menu:
+        add gui.main_menu_background
+    else:
+        add gui.game_menu_background
 
-    vbox:
+    frame:
+        align (0.5, 0.5)
+        xpadding 50
+        ypadding 50
 
-        hbox:
-            box_wrap True
+        vbox:
 
-            vbox:
-                style_prefix "check"
-                label _("Accessibility")
-                textbutton _("Sound Captions") action ToggleVariable("persistent.sound_captions")
-                textbutton _("Image Captions") action ToggleVariable("persistent.image_captions")
-
-                # Self-voicing does not work on smartphone devices, so this option only shows if the user is playing on a PC.
-                if renpy.variant("pc"):
-                    textbutton _("Self-Voicing") action Preference("self voicing", "toggle")
-
-            if renpy.variant("pc") or renpy.variant("web"):
+            hbox:
+                box_wrap True
 
                 vbox:
-                    style_prefix "radio"
-                    label _("Display")
-                    textbutton _("Window") action Preference("display", "window")
-                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                    style_prefix "check"
+                    label _("Accessibility")
+                    textbutton _("Sound Captions") action ToggleVariable("persistent.sound_captions")
+                    textbutton _("Image Captions") action ToggleVariable("persistent.image_captions")
 
-            vbox:
-                style_prefix "check"
-                label _("Skip")
-                textbutton _("Unseen Text") action Preference("skip", "toggle")
-                textbutton _("After Choices") action Preference("after choices", "toggle")
-                textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    # Self-voicing does not work on smartphone devices, so this option only shows if the user is playing on a PC.
+                    if renpy.variant("pc"):
+                        textbutton _("Self-Voicing") action Preference("self voicing", "toggle")
 
-            ## Additional vboxes of type "radio_pref" or "check_pref" can be
-            ## added here, to add additional creator-defined preferences.
+                if renpy.variant("pc") or renpy.variant("web"):
 
-        null height (4 * gui.pref_spacing)
+                    vbox:
+                        style_prefix "radio"
+                        label _("Display")
+                        textbutton _("Window") action Preference("display", "window")
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-        hbox:
-            style_prefix "slider"
-            box_wrap True
+                vbox:
+                    style_prefix "check"
+                    label _("Skip")
+                    textbutton _("Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("After Choices") action Preference("after choices", "toggle")
+                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
-            vbox:
+                ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
 
-                label _("Text Speed")
+            null height (4 * gui.pref_spacing)
 
-                bar value Preference("text speed")
+            hbox:
+                style_prefix "slider"
+                box_wrap True
 
-                label _("Auto-Forward Time")
+                vbox:
 
-                bar value Preference("auto-forward time")
+                    label _("Text Speed")
 
-            vbox:
+                    bar value Preference("text speed")
 
-                if config.has_music:
-                    label _("Music Volume")
+                    label _("Auto-Forward Time")
 
-                    hbox:
-                        bar value Preference("music volume")
+                    bar value Preference("auto-forward time")
 
-                if config.has_sound:
+                vbox:
 
-                    label _("Sound Volume")
+                    if config.has_music:
+                        label _("Music Volume")
 
-                    hbox:
-                        bar value Preference("sound volume")
+                        hbox:
+                            bar value Preference("music volume")
 
-                        if config.sample_sound:
-                            textbutton _("Test") action Play("sound", config.sample_sound)
+                    if config.has_sound:
+
+                        label _("Sound Volume")
+
+                        hbox:
+                            bar value Preference("sound volume")
+
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                if config.has_voice:
-                    label _("Voice Volume")
+                    if config.has_voice:
+                        label _("Voice Volume")
 
-                    hbox:
-                        bar value Preference("voice volume")
+                        hbox:
+                            bar value Preference("voice volume")
 
-                        if config.sample_voice:
-                            textbutton _("Test") action Play("voice", config.sample_voice)
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
 
-                if config.has_music or config.has_sound or config.has_voice:
-                    null height gui.pref_spacing
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
 
-                    textbutton _("Mute All"):
-                        action Preference("all mute", "toggle")
-                        style "mute_all_button"
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 
-        null height (4 * gui.pref_spacing)
+            null height (4 * gui.pref_spacing)
 
-        textbutton _("Return") action Return()
-
+            textbutton _("Return") action Return()
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text

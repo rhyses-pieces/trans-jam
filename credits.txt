@@ -3,6 +3,8 @@ main menu music https://ryusuke0215.itch.io/piano-music2
 
 cafe bgm https://lolurio.itch.io/slice-of-anime-music
 
+cafe ambiance https://freesound.org/people/digifishmusic/sounds/32490/
+
 dialogue bleeps https://dmochas-assets.itch.io/dmochas-bleeps-pack
 
 interface sounds https://souptonic.itch.io/souptonic-sfx-pack-1-ui-sounds

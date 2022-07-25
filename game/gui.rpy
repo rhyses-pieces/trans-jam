@@ -11,7 +11,6 @@ init offset = -2
 init python:
     gui.init(1280, 720)
 
-
 # Customize keymap
 # remove accessibility menu because it introduces problematic options
 $ config.keymap['accessibility'].remove('K_a')
@@ -26,29 +25,29 @@ $ config.keymap['accessibility'].remove('K_a')
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#99ccff'
+define gui.accent_color = '#885138'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#ad9276'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#936656'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#c1e0ff'
+define gui.hover_color = '#936656'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#61807b'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#8888887f'
+define gui.insensitive_color = '#00000080'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#3d5166'
-define gui.hover_muted_color = '#5b7a99'
+define gui.muted_color = '#42465b'
+define gui.hover_muted_color = '#575c69'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#a98869'
@@ -181,9 +180,9 @@ define gui.button_text_xalign = 0.0
 ##
 ## These customizations are used by the default interface:
 
-define gui.radio_button_borders = Borders(18, 4, 4, 4)
+define gui.radio_button_borders = Borders(44, 4, 4, 4)
 
-define gui.check_button_borders = Borders(18, 4, 4, 4)
+define gui.check_button_borders = Borders(44, 4, 4, 4)
 
 define gui.confirm_button_text_xalign = 0.5
 
@@ -224,9 +223,9 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## image files in gui/button, like the other kinds of buttons.
 
 ## The save slot button.
-define gui.slot_button_width = 276
+define gui.slot_button_width = 296
 define gui.slot_button_height = 206
-define gui.slot_button_borders = Borders(10, 10, 10, 10)
+define gui.slot_button_borders = Borders(20, 20, 20, 20)
 define gui.slot_button_text_size = 14
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color

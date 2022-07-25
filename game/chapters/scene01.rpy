@@ -1,7 +1,7 @@
 label scene01():
 
     play music "audio/cafe_bgm.mp3" fadein 1.0 loop
-    play sound "audio/cafe_ambience.mp3" fadein 1.0 volume 0.5 loop
+    play audio "audio/cafe_ambiance.ogg" fadein 1.0 volume 0.25 loop
 
     scene bg cafe with fade
 
@@ -20,13 +20,21 @@ label scene01():
     protag "(I'm glad business is doing well today.)"
     protag default @ think "(Now if {i}that guy{/i} could stop being late for once...)"
 
-    show protag:
-        move_right
-    
-    show li default at left
+    show protag at move_right with Pause(0.5)
+    show li default at inL with Pause(0.3)
 
-    li "hi."
+    li "Hey boss!"
 
-    protag stubborn "you're late!!" with hop
+    show protag stubborn at hop
+    protag "Dude, you're late!"
+
+    li blush "Heh, sorry."
+    protag default @ stubborn "This is the last time I'm letting you slide."
+    li @ stubborn "Yes sir! I'll be the most punctual employee you'll ever see!"
+    protag @ think "... That's what you said last time."
+    li "Did I? I don't remember... haha..."
+    protag @ closedeyes "*Sigh*"
+    protag "Alright. Just get prepped and start working."
+    li smile "Okay!"
 
     return

@@ -26,12 +26,12 @@ transform move_right:
 
 ## Animation that appears from the left.
 transform inL(t=move_time/2, d=move_size):
-    alpha .0 xoffset -d
+    alpha .0 xoffset -d yoffset 21
     easein t alpha 1.0 xoffset 0
 
 ## Animation that appears from the right.
 transform inR(t=move_time/2, d=move_size):
-    alpha .0 xoffset d
+    alpha .0 xoffset d yoffset 21
     easein t alpha 1.0 xoffset 0
 
 ## Animation that disappears to the left.
