@@ -10,51 +10,71 @@ label scene02():
     li "..."
     li "Hey [protag]?"
     
-    show protag:
+    show protag with dissolve:
         xzoom -1.0
     
     protag "Yeah?"
     li "I think there's a \"customer\" waiting for you."
 
+    window hide
+
     hide li with dissolve
-    show protag:
+    show protag with dissolve:
         xzoom 1.0
         pause 0.5
         move_right
-    show protag with Pause(1.25)
-    show qirin hooded at inL with Pause(0.75)
+    with Pause(0.75)
+    show protag at right
+    show qirin hooded at inL with Pause(0.5)
 
     qirin "..." (who_color="#918196")
 
     show protag at hop
     protag "Oh! That one's got an appointment with me."
 
+    window hide
+
     hide qirin with dissolve
-    show protag:
+    show protag with dissolve:
         xzoom -1.0
-    show protag at move_left with Pause(0.75)
+        pause 0.5
+        move_left
+    with Pause(0.75)
+    show protag at left
     show li default at right:
         inR()
-    show li with Pause(0.5)
+    with Pause(0.5)
 
     protag "Do you mind manning the register while I take this?"
     li @ smile "Sure thing, boss!"
     protag @ smile "Thanks [li]!"
 
+    window hide
+
     show li at outR with Pause(0.5)
     hide li
-    show protag:
-        move_right
-        pause 0.5
+    show protag with dissolve:
         xzoom 1.0
-    show protag with Pause(0.75)
+        pause 0.5
+        move_right
+    with Pause(0.75)
+    show protag at right
     show qirin hooded at inL with Pause(0.5)
 
     qirin "H-hi, I'm here for my fortune to be told." (who_color="#918196")
     protag @ happy "Hey! Sorry for the wait. Come on in!"
 
-    show protag at outR
-    show qirin at outR
+    window hide
+
+    show protag with dissolve:
+        xzoom -1.0
+        pause 0.75
+        outR()
+    show qirin:
+        pause 0.55
+        outR()
+
+    with Pause(1)
 
     # footsteps play
 

@@ -2,16 +2,21 @@ label scene03():
     
     scene bg backroom with wipeleft
 
+    with Pause(0.75)
+
     show qirin hooded at right:
         xzoom -1.0
         inR()
     show protag default at offscreenleft
 
+    with Pause(1.0)
+
     protag "Don't worry, you're safe here! Please, take a seat."
     qirin "Okay..." (who_color="#918196")
 
     show qirin default with dissolve
-    $ qirinName = "Joey"
+    with Pause(0.5)
+    $ qirinName = "Riley"
 
     narrator "The customer takes off their hood, revealing a small horn jutting out from their forehead."
     narrator "Their name is [qirin], and they come from a family of qirin."
@@ -23,7 +28,7 @@ label scene03():
         inL()
         pause 0.5
         bow()
-    show protag with Pause(1.5)
+    with Pause(1.5)
     
     protag @ smile "Nice to meet you, [qirin]! So, what brings you here?"
     qirin "Well, you see, I just recently moved out of my parents' house..."
