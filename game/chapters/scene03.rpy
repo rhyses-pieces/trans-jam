@@ -1,5 +1,7 @@
 label scene03():
     
+    # change music here
+    stop audio fadeout 1.0
     scene bg backroom with wipeleft
 
     with Pause(0.75)
@@ -7,7 +9,6 @@ label scene03():
     show qirin hooded at right:
         xzoom -1.0
         inR()
-    show protag default at offscreenleft
 
     with Pause(1.0)
 

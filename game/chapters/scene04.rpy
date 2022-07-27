@@ -1,6 +1,17 @@
 label scene04():
 
-    # zodiac bg with wipeup
+    scene bg zodiac_covered with wipeup
+
+    menu qirin_choice:
+
+        "Say Statement"
+        
+        "Choice 1":
+            jump .truth
+        "Choice 2":
+            jump .desire
+        "":
+            jump .joke
 
     return
 
