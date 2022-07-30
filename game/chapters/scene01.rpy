@@ -8,7 +8,7 @@ label scene01():
     narrator "It's a busy time at Zodiac Cafe."
     narrator "Coffee cups clink against ceramic trays, patrons chatter over tea, and the owner rings up orders at the register."
 
-    show protag default with dissolve
+    show protag neutral with dissolve
 
     protag smile "Here's your usual."
     
@@ -18,10 +18,10 @@ label scene01():
     narrator "The regular at the counter takes their drink and slips in a dollar in the tip jar before returning to their seat."
 
     protag "(I'm glad business is doing well today.)"
-    protag default @ think "(Now if {i}that guy{/i} could stop being late for once...)"
+    protag neutral @ think "(Now if {i}that guy{/i} could stop being late for once...)"
 
     show protag at move_right with Pause(0.5)
-    show li default at inL with Pause(0.3)
+    show li neutral at inL with Pause(0.3)
 
     li "Hey boss!"
 
@@ -29,7 +29,7 @@ label scene01():
     protag "Dude, you're late!"
 
     li blush "Heh, sorry."
-    protag default @ stubborn "This is the last time I'm letting you slide."
+    protag @ stubborn "This is the last time I'm letting you slide."
     li @ stubborn "Yes sir! I'll be the most punctual employee you'll ever see!"
     protag @ think "... That's what you said last time."
     li "Did I? I don't remember... haha..."

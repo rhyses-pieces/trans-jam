@@ -12,10 +12,10 @@ label scene03():
 
     with Pause(1.0)
 
-    protag "Don't worry, you're safe here! Please, take a seat."
+    protag neutral left "Don't worry, you're safe here! Please, take a seat."
     qirin "Okay..." (who_color="#918196")
 
-    show qirin default with dissolve
+    show qirin neutral with dissolve
     with Pause(0.5)
     $ qirinName = "Riley"
 
@@ -24,7 +24,7 @@ label scene03():
     narrator "Since their kind are known to be creatures of good luck, they usually disguise themself to avoid notice from unsavory characters."
 
     show qirin at bow with Pause(0.5)
-    show protag at left:
+    show protag neutral at left:
         xzoom -1.0
         inL()
         pause 0.5
@@ -39,21 +39,21 @@ label scene03():
     qirin "It's driving me insane. I love them and all, but this is too much..."
     protag @ sad "I'm sorry to hear about that."
     protag "So what kind of fortune are you looking for in this situation?"
-    qirin default @ think "I guess... I'm wondering if there's a chance if I can work things out with my family."
+    qirin neutral @ think "I guess... I'm wondering if there's a chance if I can work things out with my family."
     protag "Of course. The way I tell fortunes is a little different than most."
     protag @ smile "First, we start with enjoying a cup of tea."
     protag "What's your favorite kind?"
     qirin  @ think "Oh! Um... I like matcha tea."
     protag "You got it!"
     protag @ blush "Sorry it won't be the powder kind, but I need tea leaves for this to work."
-    qirin "No worries."
+    qirin @ smile "No worries."
 
     narrator "As [protag] prepares a cup of tea for [qirin], there's a faint sound of windchimes jingling lightly in the breeze even though they're indoors."
     # clinking cups
     # chimes
     narrator "They sit and chat for a bit while [qirin] sips at their drink."
 
-    qirin "(I don't know what I expected, but this is really nice.)"
+    qirin smile "(I don't know what I expected, but this is really nice.)"
 
     narrator "They finish their drink not long after, and [protag] motions for their cup. [qirin] hands it over, curious about what's next."
     narrator "[protag] suddenly flips the cup upside down on a strange looking teacup tray."

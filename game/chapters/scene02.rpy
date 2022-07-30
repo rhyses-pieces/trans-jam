@@ -4,8 +4,8 @@ label scene02():
 
     narrator "Later in the day..."
 
-    show protag default at left with dissolve
-    show li default at right with dissolve
+    show protag neutral at left with dissolve
+    show li neutral at right with dissolve
 
     li "..."
     li "Hey [protag]?"
@@ -19,7 +19,7 @@ label scene02():
     window hide
 
     hide li with dissolve
-    show protag with dissolve:
+    show protag with Dissolve(0.2):
         xzoom 1.0
         pause 0.5
         move_right
@@ -35,13 +35,13 @@ label scene02():
     window hide
 
     hide qirin with dissolve
-    show protag with dissolve:
+    show protag with Dissolve(0.2):
         xzoom -1.0
         pause 0.5
         move_left
     with Pause(0.75)
     show protag at left
-    show li default at right:
+    show li neutral at right:
         inR()
     with Pause(0.5)
 
@@ -53,7 +53,7 @@ label scene02():
 
     show li at outR with Pause(0.5)
     hide li
-    show protag with dissolve:
+    show protag with Dissolve(0.2):
         xzoom 1.0
         pause 0.5
         move_right
@@ -66,15 +66,15 @@ label scene02():
 
     window hide
 
-    show protag with dissolve:
+    show protag with Dissolve(0.2):
         xzoom -1.0
-        pause 0.75
+        pause 0.5
         outR()
     show qirin:
-        pause 0.55
+        pause 0.75
         outR()
 
-    with Pause(1)
+    with Pause(1.25)
 
     # footsteps play
 

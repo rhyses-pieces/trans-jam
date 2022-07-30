@@ -34,7 +34,7 @@ init python:
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define protag = Character('Jonghyun', image="protag", color="#79be9e", callback=[protagBleep,name_callback], cb_name="protag")
+define protag = Character('Jonghyun', image="protag", color="#79be9e", callback=[protagBleep,name_callback], cb_name = "protag")
 define li = Character('Noel', image="li", color="#b22673", callback=[liBleep, name_callback], cb_name="li")
 define qirin = Character('[qirinName]', image="qirin", color="#4e6e8f", callback=[qirinBleep,name_callback], cb_name="qirin")
 define reaper = Character('[reaperName]', image="reaper", color="#b85b6b", callback=[reapBleep,name_callback], cb_name="reaper")
