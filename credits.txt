@@ -1,11 +1,19 @@
 === MUSIC ===
 main menu music https://ryusuke0215.itch.io/piano-music2
 
-cafe bgm https://lolurio.itch.io/slice-of-anime-music
+cafe bgm https://potat0master.itch.io/free-background-music-for-visual-novels-bgm-pack-1
 
 cafe ambiance https://freesound.org/people/digifishmusic/sounds/32490/
 
+ambient music https://mayragandra.itch.io/freeambientmusic
+
 dialogue bleeps https://dmochas-assets.itch.io/dmochas-bleeps-pack
+
+sound effects
+  https://semkou.itch.io/sound-pack-free
+  https://freesound.org/people/TheHiraHira/sounds/460241/
+  https://freesound.org/people/ahill86/sounds/206171/
+  https://freesound.org/people/Vendarro/sounds/399538/
 
 interface sounds https://souptonic.itch.io/souptonic-sfx-pack-1-ui-sounds
 

@@ -4,7 +4,22 @@ transform same_transform(old, new):
     old
     new with Dissolve(0.2, alpha=True, mipmap=True)
 
+transform change_transform(old, new):
+    contains:
+        old
+        yalign 1.0
+        xanchor 0.0
+        alpha 1.0
+        ease 0.3 alpha 0.0
+    contains:
+        new
+        yalign 1.0
+        xanchor 0.0
+        alpha 0.0
+        ease 0.3 alpha 1.0
+
 define config.side_image_same_transform = same_transform
+define config.side_image_change_transform = change_transform
 define config.side_image_only_not_showing = True
 
 # love interest

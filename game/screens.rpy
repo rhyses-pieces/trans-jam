@@ -273,7 +273,14 @@ style quick_button:
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
+    outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
 
+# style quick_button_text_idle_color:
+    
+
+# style quick_button_text_hover_color:
+#     outlines [ (absolute(3), "#c7b9a7", absolute(0), absolute(0)) ]
+    
 
 ################################################################################
 ## Main and Game Menu Screens

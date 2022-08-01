@@ -8,23 +8,30 @@ label scene04():
     qirin right "Oh! Um... I was born in the year of the ram."
     protag "I see. I'll open this and..."
 
+    play sound "audio/clink.mp3"
+
     window hide
 
     scene bg zodiac_qirin with dissolve
     with Pause(0.5)
 
     protag think left "Hmmm..."
-    protag "(Well, it looks like the tea leaves are covering ram...)"
+    protag "(Well, it looks like the tea leaves are covering {b}ram{/b}...)"
+    protag @ neutral "(But a lot of them are gathered in the {b}winter{/b} section.)"
+    protag @ sad "(That's pretty ominous.)"
+    protag ""
+
+    stop music fadeout 1.0
 
     menu qirin_choice:
 
-        "This fortune says..."
+        "What kind of interpretation do you want to convey?"
         
-        "Choice 1":
+        "Tell the truth.":
             jump .truth
-        "Choice 2":
+        "Lean into what [qirin] wants.":
             jump .desire
-        "\"... you should go to the Bahamas.\"":
+        "Just go with whatever.":
             jump .joke
 
     return
@@ -47,7 +54,7 @@ label .desire():
 
 label .joke():
 
-    # qirin joke interpretation
+    protag stubborn ""
 
     $ jokeEnding += 1
 

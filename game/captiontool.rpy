@@ -36,6 +36,7 @@
 
 default persistent.sound_captions = False
 default persistent.image_captions = False
+default persistent.gui_font = "brassmono.ttf"
 
 label splashscreen:
 
