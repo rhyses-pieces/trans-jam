@@ -8,13 +8,13 @@ label scene05():
 
     protag "Was this helpful for you?"
     
-    if truthEnding > 0:
+    if renpy.seen_label(scene04.truth):
     
         qirin sad "It... it made me think, that's for sure."
 
         jump .truth
     
-    elif desireEnding > 0:
+    elif renpy.seen_label(scene04.desire):
     
         qirin smile @ happy "It was! Thank you so much."
 
@@ -27,6 +27,7 @@ label scene05():
         jump .joke
     
     protag @ smile "It was a pleasure doing business with you."
+    qirin neutral "Likewise. Thanks again for the reading."
 
     return
 
@@ -43,15 +44,21 @@ label .truth():
 
 label .desire():
     
+    protag neutral @ happy "I'm glad."
+    protag "..."
     protag sad "(I don't know if I'm making the right decision or not.)"
-    protag "(Lying to their face feels bad, but it's not like I can tell them that things will go south no matter what...)"
-    protag neutral "(Maybe this is for the best.)"
+    protag "(I may have skewed the interpretation a little to make them feel better, but...)"
+    protag neutral "(I don't know. Maybe this is for the best.)"
 
     return
 
 label .joke():
 
     protag @ stubborn "Yes. The Bahamas."
-    protag "I think you'll be able to find "
+    protag "The southernly direction leans towards positivity for you."
+    qirin "...Okay? If you say so, I guess..."
+    qirin "Actually, wait. Now that you mention it.."
+    qirin neutral @ happy "My partner mentioned wanting to go somewhere tropical!"
+    protag @ happy "It all works out!"
     
     return

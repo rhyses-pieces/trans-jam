@@ -61,6 +61,7 @@ label start():
     call scene03
     call scene04
     call scene05
+    call scene06
 
     return
 
