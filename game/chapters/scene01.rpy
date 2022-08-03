@@ -1,7 +1,7 @@
 label scene01():
 
-    play music "audio/cafe_bgm.ogg" fadein 1.0 loop
-    play audio "audio/cafe_ambiance.ogg" fadein 1.0 volume 0.5 loop
+    play music cafe_bgm fadein 1.0 loop
+    play audio cafe_ambiance fadein 1.0 volume 0.5 loop
 
     scene bg cafe with fade
 
