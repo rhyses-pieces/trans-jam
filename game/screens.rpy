@@ -273,8 +273,11 @@ style quick_button:
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
+    idle_color "#c7b9a7"
+    hover_color "#885138"
     outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
-    
+    hover_outlines [ (absolute(3), "#c7b9a700", absolute(0), absolute(0)) ]
+    insensitive_outlines [ (absolute(3), "#c7b9a700", absolute(0), absolute(0)) ]
 
 ################################################################################
 ## Main and Game Menu Screens
@@ -338,6 +341,9 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
+    hover_outlines [ (absolute(3), "#e3decf", absolute(0), absolute(0)) ]
+    selected_outlines [ (absolute(3), "#c7b9a700", absolute(0), absolute(0)) ]
 
 
 ## Custom Title Menu ###########################################################
@@ -727,6 +733,13 @@ style page_button:
 
 style page_button_text:
     properties gui.button_text_properties("page_button")
+    idle_color "#c7b9a7"
+    selected_color gui.selected_color
+    hover_color "#885138"
+    outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
+    hover_outlines [ (absolute(3), "#e3decf", absolute(0), absolute(0)) ]
+    selected_outlines [ (absolute(3), "#c7b9a700", absolute(0), absolute(0)) ]
+    insensitive_outlines [ (absolute(3), "#c7b9a700", absolute(0), absolute(0)) ]
 
 style slot_button:
     properties gui.button_properties("slot_button")

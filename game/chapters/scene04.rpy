@@ -32,11 +32,11 @@ label scene04():
         "What kind of interpretation do you want to convey?"
         
         "Tell the truth.":
-            jump .truth
+            jump scene04.truth
         "Lean into what [qirin] wants.":
-            jump .desire
+            jump scene04.desire
         "Just go with whatever.":
-            jump .joke
+            jump scene04.joke
 
     return
 
@@ -52,6 +52,7 @@ label .truth():
     protag "Whether or not you overcome these challenges, spring will be waiting around the corner."
 
     $ truthEnding += 1
+    $ qirin_truth = True
     
     return
 
@@ -66,6 +67,7 @@ label .desire():
     protag @ smile "That is to say, even though things will be tough for a bit, you may be able to forge positive relationships."
 
     $ desireEnding += 1
+    $ qirin_desire = True
 
     return
 
@@ -80,5 +82,6 @@ label .joke():
     protag "Your energies will be cleansed, refreshed, and revitalized in time for summer."
 
     $ jokeEnding += 1
+    $ qirin_joke = True
 
     return

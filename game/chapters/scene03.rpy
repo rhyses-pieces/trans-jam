@@ -1,12 +1,10 @@
 label scene03():
     
-    play music backroom fadein 1.0 volume 0.5 loop
-    stop audio fadeout 1.0
+    play music backroom fadein 1.0 fadeout 2.0 volume 0.5 loop
+
     scene bg backroom with wipeleft
 
     with Pause(0.75)
-
-    play sound dooropen
 
     show qirin hooded at right:
         xzoom -1.0
@@ -52,20 +50,20 @@ label scene03():
     protag @ blush "Sorry it won't be the powder kind, but I need tea leaves for this to work."
     qirin @ smile "No worries."
 
-    play audio windchimes fadein 1.0 volume 0.75
+    play sound windchimes fadein 1.0 volume 0.75
 
     narrator "As [protag] prepares a cup of tea for [qirin], there's a faint sound of windchimes jingling lightly in the breeze even though they're indoors."
     
-    play sound teacups
-    stop audio fadeout 1.0
+    play sound teacups fadein 1.0 fadeout 1.0
     
     narrator "They sit and chat for a bit while [qirin] sips at their drink."
     qirin smile "(I don't know what I expected, but this is really nice.)"
 
     narrator "They finish their drink not long after, and [protag] motions for their cup. [qirin] hands it over, curious about what's next."
+
+    play sound "audio/clink.mp3"
+
     narrator "[protag] suddenly flips the cup upside down on a strange looking teacup tray."
     qirin think "Huh...?"
-
-    play sound clink
 
     return

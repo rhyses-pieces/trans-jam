@@ -3,18 +3,20 @@ label scene05():
     scene bg backroom with wipedown
     with Pause(0.5)
 
-    show protag neutral at left with dissolve
-    show qirin neutral at right with dissolve
+    show protag neutral at left with dissolve:
+        xzoom -1.0
+    show qirin neutral at right with dissolve:
+        xzoom -1.0
 
     protag "Was this helpful for you?"
     
-    if renpy.seen_label(scene04.truth):
+    if qirin_truth:
     
         qirin sad "It... it made me think, that's for sure."
 
         jump .truth
     
-    elif renpy.seen_label(scene04.desire):
+    elif qirin_desire:
     
         qirin smile @ happy "It was! Thank you so much."
 

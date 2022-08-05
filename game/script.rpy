@@ -47,6 +47,18 @@ default truthEnding = 0
 default desireEnding = 0
 default jokeEnding = 0
 
+default qirin_truth = False
+default qirin_desire = False
+default qirin_joke = False
+
+default reaper_truth = False
+default reaper_desire = False
+default reaper_joke = False
+
+default li_truth = False
+default li_desire = False
+default li_joke = False
+
 # The game starts here.
 label start():
     # these are "temp" variables that change in the story regardless of player input
