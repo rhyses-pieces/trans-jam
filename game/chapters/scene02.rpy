@@ -14,7 +14,7 @@ label scene02():
         xzoom -1.0
     
     protag "Yeah?"
-    li "I think there's a \"customer\" waiting for you."
+    li "I think there's someone waiting for you."
 
     window hide
 

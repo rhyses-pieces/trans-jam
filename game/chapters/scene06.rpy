@@ -41,5 +41,13 @@ label scene06():
     protag "I mean, you never had a problem with me being trans, right?"
     li @ think "Why should I? You're just you. Being trans isn't a bad thing at all. Not sure why people assume it is."
     protag "Exactly. Just 'cause you're supernatural doesn't automatically mean you're bad."
+    li @ blush "... Thanks."
+    protag neutral @ happy "Hey, no worries! We're here for each other."
+    protag "Anyways, it seems like things are winding down in the cafe. Let's start closing up shop."
+    li "Alright."
+
+    narrator "The day draws to a close, with another surprise waiting tomorrow..."
+
+    stop music fadeout 1.0
     
     return
