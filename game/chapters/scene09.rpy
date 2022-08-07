@@ -1,8 +1,8 @@
 label scene09():
     
-    if renpy.seen_label(scene08.truth):
+    if reaper_truth:
         jump .truth
-    elif renpy.seen_label(scene08.desire):
+    elif reaper_desire:
         jump .desire
     else:
         jump .joke

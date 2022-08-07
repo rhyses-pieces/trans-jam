@@ -64,7 +64,7 @@ label start():
     # these are "temp" variables that change in the story regardless of player input
     $ genericName = ""
     $ qirinName = "Customer"
-    $ reaperName = "Customer"
+    $ reaperName = "Unknown Caller"
 
     stop music fadeout 1.0
 
