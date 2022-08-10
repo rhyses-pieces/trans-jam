@@ -32,7 +32,7 @@ label scene07():
     scene bg cafe with Fade(0.5, 1, 0.5)
     play music cafe_bgm fadein 1.0 fadeout 2.0 loop
 
-    show protag neutral at right with dissolve
+    show protag at right with dissolve
     with Pause(0.5)
     
     show reaper smile at left:
@@ -52,7 +52,9 @@ label scene07():
     reaper "They said it was something about workforce reduction..."
     protag stubborn "That literally makes no sense!"
     protag @ mad "How do you justify reducing the workforce for the literal {i}afterlife{/i}?"
-    reaper "I dunno... but, well, I'm out of a job."
+    narrator "[reaper] works as a grim reaper - the kind thaqt ferries the recently deeased to Heaven or Hell."
+    narrator "Or, well. She {i}used{/i} to work as a grim reaper."
+    reaper "I dunno... but right now, I'm out of a job."
     protag sad "..."
     protag closedeyes "Hmm..."
     protag neutral "What if I read your fortune?"

@@ -55,4 +55,5 @@ layeredimage reaper:
     group emote auto:
         attribute neutral default
 
-image side reaper = LayeredImageProxy('reaper')
+image side reaper left = LayeredImageProxy('reaper', Transform(xalign = 0.0))
+image side reaper right = LayeredImageProxy('reaper', Transform(xalign = 1.0))

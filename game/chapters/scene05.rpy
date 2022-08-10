@@ -11,21 +11,13 @@ label scene05():
     protag "Was this helpful for you?"
     
     if qirin_truth:
-    
         qirin sad "It... it made me think, that's for sure."
-
         jump .truth
-    
     elif qirin_desire:
-    
         qirin smile @ happy "It was! Thank you so much."
-
         jump .desire
-    
     else:
-    
         qirin think "... the Bahamas?"
-
         jump .joke
     
     protag @ smile "It was a pleasure doing business with you."
