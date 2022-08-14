@@ -20,7 +20,7 @@ label scene04():
     protag neutral "(But a lot of them are gathered in the {b}winter{/b} section.)"
     protag surprise "(There's even some on the {b}ox{/b} sign.)"
     protag sad @ think "(That's pretty ominous.)"
-    protag "(It probably means that things with their family {b}won't work out{/b}...)"
+    protag "(It probably means that things with their family won't work out...)"
     protag "(I don't think it's entirely bad though.)"
     protag @ think "(There's also some leaves on {b}summer{/b}, so they might have strength to rise above their circumstances.)"
     protag "(What should I tell them?)"
