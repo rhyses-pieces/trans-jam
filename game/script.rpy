@@ -74,14 +74,23 @@ label start():
     call scene04
     call scene05
     call scene06
+    call scene07
+    call scene08
+    call scene09
+    call scene10
 
     return
 
 # game endings here
 label end():
-    show protag smile
-    show li smile
-    protag "I guess we can end it here."
-    li "Alright, I'll see you later then."
+    
+    if truth_ending >= 2:
+        jump truth_ending
+    elif desire_ending >= 2:
+        jump desire_ending
+    elif joke_ending >= 2:
+        jump joke_ending
+    else:
+        jump generic_ending
 
     return

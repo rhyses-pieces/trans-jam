@@ -3,7 +3,7 @@ label scene01():
     play music cafe_bgm fadein 1.0 loop
 
     scene bg cafe with fade
-
+    
     narrator "It's a busy time at Zodiac Cafe."
     narrator "Coffee cups clink against ceramic trays, patrons chatter over tea, and the owner rings up orders at the register."
 
