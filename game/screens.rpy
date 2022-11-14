@@ -1632,3 +1632,89 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 600
+
+
+################################################################################
+## Credit Screen
+################################################################################
+
+transform credits_scroll(speed):
+    ypos 720
+    linear speed ypos -720
+
+screen credits():
+    style_prefix "credits"
+
+    frame at credits_scroll(5.0):
+        background "game_menu"
+        xalign 0.5
+
+        vbox:
+            label "Credits"
+
+            null height 20
+
+            hbox:
+                text "Art, Programming, Writing"
+                text "Rhys"
+
+            hbox:
+                text "resource"
+                text "title"
+
+            vbox:
+                text "BGM"
+
+                hbox:
+                    vbox:
+                        text "{a=https://incompetech.com/}Kevin MacLeod{/a}"
+                    vbox:
+                        text "{a=https://mayragandra.itch.io/freeambientmusic}Mayra{/a}"
+                
+                hbox:
+                    vbox:
+                        text "{a=https://ryusuke0215.itch.io/piano-music2}Nid{/a}"
+                    vbox:
+                        text "{a=https://potat0master.itch.io/free-background-music-for-visual-novels-bgm-pack-1}potat0master{/a}"
+                    
+            
+            vbox: 
+                text "SFX"
+
+                hbox:
+                    vbox:
+                        text "{a=https://dmochas-assets.itch.io/dmochas-bleeps-pack}dmochas-assets{/a}"
+                    vbox:
+                        text "{a=https://souptonic.itch.io/souptonic-sfx-pack-1-ui-sounds}SoupTonic{/a}"
+            
+            vbox:
+                text "Programming Assets"
+
+                hbox:
+                    vbox:
+                        text "Auto Highlight"
+                        text "{a=https://github.com/SoDaRa/Auto-Highlight}SoDaRa{/a}"
+                    vbox:
+                        text "Caption Tool"
+                        text "{a=https://npckc.itch.io/caption-tool-for-renpy}NPCKC{/a}"
+
+                hbox:
+                    vbox:
+                        text "Separate History Screen"
+                        text "{a=https://tofurocks.itch.io/renpy-history}tofurocks{/a}"
+                    vbox:
+                        text "Sprite Animation Utilities"
+                        text "{a=https://github.com/nyaatrap/renpy-utilities}nyaatrap{/a}"
+
+style credits_hbox:
+    spacing 40
+    ysize 30
+
+style credits_label:
+    xalign 0.5
+
+style credits_text:
+    xalign 0.5
+    color "#c7b9a7"
+    outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
+    hyperlink_functions (hyperlink_text, hyperlink_function, None)
