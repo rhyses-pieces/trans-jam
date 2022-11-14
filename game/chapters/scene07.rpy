@@ -72,7 +72,7 @@ label scene07():
         xzoom -1.0
         pause 0.5
         outR()
-    show qirin:
+    show reaper:
         pause 0.75
         outR()
 

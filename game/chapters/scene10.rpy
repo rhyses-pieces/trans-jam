@@ -1,7 +1,6 @@
 label scene10():
     
     play music cafe_bgm fadein 1.0 fadeout 2.0 loop
-
     scene bg cafe with Fade(0.5, 1, 0.5)
 
     show protag smile at right with fade
@@ -100,6 +99,20 @@ label scene10():
     narrator "Meanwhile..."
 
     li "So uh... you guys seem close."
-    protag "Yeah,"
+    protag "Yeah, we've been friends for a while."
+    protag @ think "Um, everything okay?"
+    li @ think "Yeah. Why do you ask?"
+    protag "Oh, I was just checking. I wasn't expecting you to come in so early!"
+    protag @ smile "Is there anything you want to talk about?"
+    li @ blush "O-oh. Ha ha..."
+    li "Actually, I was wondering if... you know... you could do a reading on me too."
+    protag @ surprise "Huh?"
+    li @ blush "Yeah! Um. I have a friend of mine who's going through some stuff..."
+    li "And I was wondering if, um, you could do a reading on that?"
+    protag @ think "I mean, sure! If you want."
+    protag smile "We can hold off on opening the cafe so we can get your reading done."
+    protag "How's that sound?"
+    li @ blush "T-that sounds good to me..."
+    protag @ happy "Alright!"
 
     return

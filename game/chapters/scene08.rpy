@@ -21,7 +21,7 @@ label scene08():
     protag "Here's your tea."
     reaper @ happy "Thanks!"
 
-    play sound windchimes fadein 1.0 fadeout 1.0 volume 0.75
+    play sound windchimes fadein 1.0 volume 0.75
 
     narrator "There are unseen chimes gently playing soft, high-pitched notes for the invisible breeze to carry away."
     narrator "But there are no windchimes in the room - just two people enjoying their drinks."

@@ -78,6 +78,8 @@ label start():
     call scene08
     call scene09
     call scene10
+    call scene11
+    call scene12
 
     return
 
