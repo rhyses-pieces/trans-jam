@@ -1659,8 +1659,12 @@ screen credits():
                 text "Rhys"
 
             hbox:
-                text "resource"
-                text "title"
+                text "Editing"
+                text "Andy Paradox"
+            
+            hbox:
+                text "Editing"
+                text "unlockthelore"
 
             vbox:
                 text "BGM"

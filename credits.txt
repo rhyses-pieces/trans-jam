@@ -18,3 +18,8 @@ auto highlight https://github.com/SoDaRa/Auto-Highlight
 caption tool https://npckc.itch.io/caption-tool-for-renpy
 
 animation https://github.com/nyaatrap
+
+
+=== WRITING ===
+andy paradox 
+unlockthelore

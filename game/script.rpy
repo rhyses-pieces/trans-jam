@@ -95,4 +95,6 @@ label end():
     else:
         jump generic_ending
 
+    call credits
+
     return

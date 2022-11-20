@@ -22,8 +22,14 @@ label scene11():
     li neutral "I think I understand."
     protag @ happy "Awesome! {nw}"
     show protag smile
-    extend "Let's get into it. What's your favorite tea?"
-    li @ think "I like chai with some milk and sugar."
+    extend "Let's get into it. What are you looking for in this reading?"
+    li blush "Haha... That's a little embarrassing, but my friend was looking for um..."
+    li "Love advice? I guess? It was weird..."
+    with Pause(0.25)
+    show protag with bow
+    protag @ smile "It's not weird at all. I think that's very sweet that you're looking out for your friend."
+    protag @ think "What's your favorite tea?"
+    li @ smile "I like chai with some milk and sugar."
     with Pause(0.25)
     show protag with bow
     protag neutral @ happy "You got it."
