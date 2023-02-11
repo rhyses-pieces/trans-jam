@@ -1,3 +1,10 @@
 label desire_ending():
-    
-    return
+  
+  if li_desire:
+    jump .love_ending
+
+  return
+
+label .love_ending():
+   
+  return

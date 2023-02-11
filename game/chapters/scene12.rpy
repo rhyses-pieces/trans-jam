@@ -46,13 +46,35 @@ label scene12():
 
 label .truth():
 
-  protag closedeyes "..."
-  protag @ blush "..."
-  protag "Ahem."
+  protag "I have good news {i}or{/i} bad news, depending on how you view it."
+  li think @ fear "Huh? Okay..."
+  protag "Your friend's prospects are bountiful-- {nw}"
+  show protag closedeyes
+  extend "but there might be conflict when it comes to their love life."
+  protag neutral "Your friend will attract a lot of people to their side. On one hand, they won't want for company."
+  protag @ sad "But at the same time, sometimes the company might not be the best match for them."
+  show li surprise with hop
+  with Pause(0.25)
+  li "!"
+  li think "..."
+  li neutral "Huh, that sounds... messy."
+  protag @ sad "Yeah..."
+  protag think "It seems like they'll be popular, especially during {b}spring{/b}."
+  protag @ smile "Many people will find them charming and love them, I'm sure."
+  li @ blush "You think so?"
+  protag @ happy "Of course!"
+  
+  $ truthEnding += 1
+  $ li_truth = True
+
+  return
+
+
+label .desire():
+
   protag neutral "Your friend seems like they might find a potential match in many signs."
   protag "Among them are those born under the {b}rabbit{/b}, {b}dragon{/b}, and {b}snake{/b} signs."
-  li @ fear "That's a lot..."
-  li "(Wait...)"
+  li @ think "(Wait...)"
   show li surprise with hop
   with Pause(0.25)
   li neutral @ think "Can I ask what sign you are?"
@@ -69,29 +91,6 @@ label .truth():
   protag blush "Y-yeah? What does that have to do with anything?"
   li @ closedeyes "I have to be honest-- I'm not here for my friend."
   protag "... {i}Oh{/i}."
-  
-  $ truthEnding += 1
-  $ li_truth = True
-
-  return
-
-
-label .desire():
-
-  protag "I have good news {i}or{/i} bad news, depending on how you view it."
-  li think @ fear "Huh? Okay..."
-  protag "Your friend's prospects are bountiful-- {nw}"
-  show protag smile
-  extend "they'll be pretty popular when it comes to their love life."
-  show li surprise with hop
-  with Pause(0.25)
-  li "!"
-  li think "..."
-  li neutral "Huh, that sounds... cool...?"
-  protag @ happy "Yeah! It seems like they'll be popular, especially during {b}spring{/b}."
-  protag "Many people will find them charming and love them, I'm sure."
-  li @ blush "You think so?"
-  protag @ happy "Of course!"
   
   $ desireEnding += 1
   $ li_desire = True

@@ -14,6 +14,23 @@ label scene13():
 
 label .truth():
   
+  show protag smile at left with dissolve:
+    xzoom -1.0
+  show li blush at right with dissolve
+
+  li "Well, uh, that's... that gives me a lot to think about, at least."
+  protag think "?"
+  protag "Yes, I'm sure it's a lot to think about. Your \"friend\" seems like they have a lot on their plate."
+  show li surprise at hop
+  li "!"
+  li blush "Eheh... yeah, they do. Poor guy."
+  protag ""
+  protag "(I wonder what his deal is?)"
+
+  return
+
+label .desire():
+
   show protag blush at left with dissolve:
     xzoom -1.0
   show li smile at right with dissolve
@@ -32,16 +49,6 @@ label .truth():
   protag blush "Listen, I... wouldn't be opposed to trying us out if you're willing."
   li happy "Of course I'm willing. I wanna take you out on a date!"
   protag happy "Yeah, okay! Let's go on a date."
-
-  return
-
-label .desire():
-
-  show protag smile at left with dissolve:
-    xzoom -1.0
-  show li blush at right with dissolve
-
-  
   
   return
 
