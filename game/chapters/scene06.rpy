@@ -1,6 +1,6 @@
 label scene06():
 
-    play music cafe_bgm fadein 1.0 fadeout 2.0 loop
+    play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
 
     scene bg cafe with Fade(0.5, 1, 0.5)
 
@@ -20,23 +20,12 @@ label scene06():
     li @ think "What was that about?"
     protag "Oh! Hey [li]."
     protag @ blush "I forgot I never told you much about what I do back there."
-    protag "You remember the one lady who kinda looked like a lion?"
-    li fear "Jeez, why bring her up? I was so scared when I first saw the lady!"
-    protag "Aw, hey, Mrs. Lee is nice! She wouldn't hurt a fly."
-    protag @ think "... I mean, well, unless you lied in front of her. Then she'd get {i}real{/i} mad."
-    li neutral @ think "You're not doing a good job of making her seem less scary."
-    protag @ happy "Anyways!"
-    protag "She's a haechi. You know, the scaly lion-dogs who stab liars with their horns?"
-    li fear "..."
-    li "Oh my god. This explains so much. That's why she looks so intense."
-    protag "That's 'cause she cares a lot! She was the first person who asked me read their fortune."
-    protag @ smile "She wanted to know if her daughter would do alright in school."
-    protag @ happy "After that, she really helped getting my fortune-telling gig off the ground!"
-    protag @ smile "That's why most of our customers are kinda supernatural. The cafe's for normal humans like me."
-    li closedeyes "... This explains so much."
-    protag @ happy "You said that already, haha."
-    li think "Why do you do it though?"
-    protag @ think "Well..."
+    li "All I know is that you usually have tea with certain customers in the back..."
+    protag "Eheh, I read their fortunes through tea leaves! They just go to the back for privacy."
+    li @ surprise "Oh! That makes sense. {nw}"
+    show li think
+    extend "I think I remember seeing one of them with rabbit ears...?"
+    protag "That's right. They're part of the mythological population in the city -- like you and me!"
     protag "Back when I was younger, one of my family friends was a shaman."
     protag smile "I thought she was super cool, even though she got a lot of flack for it."
     protag "She actually taught me a few things about fortune-telling!"

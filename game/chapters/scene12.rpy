@@ -12,7 +12,7 @@ label scene12():
   protag smile "(Oh well, I'm just here to do a love reading.)"
   protag neutral "Let's see..."
 
-  play sound "audio/clink.mp3"
+  play_sound(clink)
 
   window hide
 
@@ -50,9 +50,9 @@ label .truth():
   li think @ fear "Huh? Okay..."
   protag "Your friend's prospects are bountiful-- {nw}"
   show protag closedeyes
-  extend "but there might be conflict when it comes to their love life."
-  protag neutral "Your friend will attract a lot of people to their side. On one hand, they won't want for company."
-  protag @ sad "But at the same time, sometimes the company might not be the best match for them."
+  extend "but there will be conflict in their love life."
+  protag neutral "On one hand, they won't want for company."
+  protag @ sad "On the other hand, that means they'll have a hard time finding their match."
   show li surprise with hop
   with Pause(0.25)
   li "!"
@@ -68,7 +68,6 @@ label .truth():
   $ li_truth = True
 
   return
-
 
 label .desire():
 
@@ -109,11 +108,10 @@ label .joke():
   li surprise "... Huh??"
   protag @ stubborn "Your friend {i}needs{/i} to avoid birds, especially chickens."
   protag "It's imperative for their survival."
-  li "{b}Huh?{/b}"
+  li @ fear "{b}Huh?{/b}"
   protag stubborn "Avoid pigeons too. Apparently those are also incredibly dangerous."
   protag "I once had a client who came to me because there were pigeons mating in front of their window everyday."
   li "What?"
-  protag "(Two pigeons have found more action than I have, damn.)"
   protag "Anyway your friend is going to attract a lot of danger in their life. They need to be careful."
   
   $ jokeEnding += 1

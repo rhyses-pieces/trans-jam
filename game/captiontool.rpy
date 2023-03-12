@@ -78,8 +78,17 @@ init python:
 # TODO: Add your own sound files.
 
     # example = "audio/examplefile.ogg"
-    beepbeep = "audio/beepbeep.ogg"
-    phone = "audio/phone.ogg"
+    phone_pickup = "audio/phone_pickup.ogg"
+    phone_ring = "audio/phone_ring.ogg"
+    confirm = "audio/confirm.ogg"
+    close = "audio/close.ogg"
+    cancel = "audio/cancel.ogg"
+    select = "audio/select.ogg"
+    teacups = "audio/teacups.ogg"
+    clink = "audio/clink.mp3"
+    windchimes = "audio/windchimes.ogg"
+    dooropen = "audio/dooropen.mp3"
+    doorclose = "audio/doorclose.mp3"
 
 # This is where you define the sound captions for each sound file you will be using in the game. Please make sure the names of the sounds defined above match the ones used for the captions below.
 
@@ -87,8 +96,17 @@ init python:
 
     sound_list = {
     # example: _("Example text here"),
-    beepbeep : _("A phone beeps"),
-    phone : _("A phone is ringing"),
+    phone_pickup : _("Someone picks up the phone call"),
+    phone_ring : _("A phone rings"),
+    confirm : _("Menu item selection confirmed"),
+    close : _("Menu item closed"),
+    cancel : _("Menu item selection canceled"),
+    select : _("Menu item selected"),
+    teacups : _("Teacups being brought out"),
+    clink : _("Teacup clinks"),
+    windchimes : _("Windchimes ring"),
+    dooropen : _("Door opens"),
+    doorclose : _("Door closes"),
     }
 
 # This is where you define the names for the music files you will be using in the game. It is recommended to define the main menu BGM as well.
@@ -97,7 +115,9 @@ init python:
 
     # example = "audio/examplefile.ogg"
     title = "audio/main_menu_bgm.ogg"
-    hotsprings = "audio/hotsprings.ogg"
+    cafe = "audio/cafe_bgm.ogg"
+    backroom = "audio/backroom.ogg"
+    nextday = "audio/day2.ogg"
 
 # This is where you define the music captions for each music file you will be using in the game. Please make sure the names of the music defined above match the ones used for the captions below.
 
@@ -105,8 +125,10 @@ init python:
 
     music_list = {
     # example: _("Example text here"),
-    title : ("Title BGM"),
-    hotsprings : ("Hot Springs BGM"),
+    title : _("Relaxed piano playing"),
+    cafe : _("Jovial, energetic music"),
+    backroom : _("Mysterious, magical violins and harp"),
+    nextday : _("Lively strings plucking"),
     }
 
 # The sound and music commands follow below. Various values are mentioned, but in general they do not need to be changed. Please refer to the Ren'py documentation for more details: https://www.renpy.org/doc/html/audio.html

@@ -1,15 +1,15 @@
 label scene07():
 
-    play music "audio/day2.ogg" fadein 1.0 loop
+    play_music(nextday, fadein=1.0, loop=True)
     scene bg bedroom with fade
 
     show protag closedeyes at center with dissolve
 
-    play sound "audio/phone_ring.ogg"
+    play_sound(phone_ring)
     with Pause(0.25)
 
     show protag at wag
-    play sound "audio/phone_pickup.ogg"
+    play_sound(phone_pickup)
 
     protag "Mmm... hello?"
 
@@ -30,7 +30,7 @@ label scene07():
     protag @ happy "Sounds great! See you then."
 
     scene bg cafe with Fade(0.5, 1, 0.5)
-    play music cafe_bgm fadein 1.0 fadeout 2.0 loop
+    play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
 
     show protag at right with dissolve
     with Pause(0.5)
@@ -52,7 +52,7 @@ label scene07():
     reaper "They said it was something about workforce reduction..."
     protag stubborn "That literally makes no sense!"
     protag @ mad "How do you justify reducing the workforce for the literal {i}afterlife{/i}?"
-    narrator "[reaper] works as a grim reaper - the kind thaqt ferries the recently deeased to Heaven or Hell."
+    narrator "[reaper] works as a grim reaper - the kind that ferries the recently deceased to Heaven or Hell."
     narrator "Or, well. She {i}used{/i} to work as a grim reaper."
     reaper "I dunno... but right now, I'm out of a job."
     protag sad "..."
@@ -66,7 +66,7 @@ label scene07():
     protag "Come on back!"
 
     with Pause(0.25)
-    play sound dooropen
+    play_sound(dooropen)
 
     show protag with Dissolve(0.2):
         xzoom -1.0

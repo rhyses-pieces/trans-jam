@@ -1,9 +1,9 @@
 label scene08():
     
-    play music backroom fadein 1.0 fadeout 2.0 volume 0.5 loop
+    play_music(backroom, fadein=1.0, fadeout=2.0, relative_volume=0.5, loop=True)
     scene bg backroom with wipeleft
 
-    play sound doorclose
+    play_sound(doorclose)
 
     show protag at left with dissolve:
         xzoom -1.0
@@ -15,13 +15,13 @@ label scene08():
 
     narrator "[protag] and [reaper] had been friends since [protag]'s first accidental stumble into the supernatural world."
     narrator "Though [reaper] had never asked for her fortune to be read, she's known of [protag]'s fortunetelling business for quite some time now."
-    
-    play sound teacups fadein 1.0
+        
+    play_sound(teacups, fadein=1.0)
 
     protag "Here's your tea."
     reaper @ happy "Thanks!"
 
-    play sound windchimes fadein 1.0 volume 0.75
+    play_sound(windchimes, fadein=1.0, relative_volume=0.75)
 
     narrator "There are unseen chimes gently playing soft, high-pitched notes for the invisible breeze to carry away."
     narrator "But there are no windchimes in the room - just two people enjoying their drinks."
@@ -30,7 +30,7 @@ label scene08():
 
     scene bg zodiac_covered with wipeup
     with Pause(1)
-    play sound "audio/clink.mp3"
+    play_sound(clink)
     scene bg zodiac_reaper with dissolve
 
     protag think left "Huh..."
@@ -46,12 +46,12 @@ label scene08():
     protag think "(I wonder what I should say to her...)"
 
     menu reaper_choice:
-        "What kind of interpretation do you want to convey?"
+        "What should you say to her?"
         "Be honest.":
             jump scene08.truth
         "Tell her what she wants to hear.":
             jump scene08.desire
-        "Say: \"You should get into pottery.\"":
+        "\"You should get into pottery.\"":
             jump scene08.joke
 
     return

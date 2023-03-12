@@ -186,5 +186,7 @@
       }
     ]
   },
-  "editor.wordWrap": "bounded"
+  "editor.wordWrap": "bounded",
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "renpy.watchFoldersForChanges": true
 }

@@ -1,6 +1,6 @@
 label scene11():
 
-    play music backroom fadein 1.0 fadeout 2.0 volume 0.5 loop
+    play_music(backroom, fadein=1.0, fadeout=2.0, relative_volume=0.5, loop=True)
     scene bg backroom with wipeleft
 
     show protag at left with dissolve:
@@ -34,18 +34,18 @@ label scene11():
     show protag with bow
     protag neutral @ happy "You got it."
 
-    play sound teacups fadein 1.0
+    play_sound(teacups, fadein=1.0)
 
     narrator "While [protag] begins making [li]'s tea, [li] begins to hear something faint."
 
-    play sound windchimes fadein 1.0 fadeout 1.0 volume 0.75
+    play_sound(windchimes, fadein=1.0, fadeout=1.0, relative_volume=0.75)
 
     narrator "Light, chime tones that are almost imperceptible intimately wrap around the two of them."
 
     li @ blush "(This almost feels like a date...)"
 
     show li surprise at hop
-    play sound teacups fadein 1.0 volume 0.75
+    play_sound(teacups, fadein=1.0, relative_volume=0.75)
 
     protag @ happy "Here you are!"
     show li blush
@@ -64,6 +64,6 @@ label scene11():
     show protag neutral
     narrator "[protag] clears his throat before flipping [li]'s cup over."
 
-    play sound "audio/clink.mp3" volume 0.75
+    play_sound(clink, relative_volume=0.75)
 
     return

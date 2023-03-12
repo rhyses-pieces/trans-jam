@@ -67,7 +67,7 @@ label scene02():
     window hide
 
     with Pause(0.25)
-    play sound dooropen
+    play_sound(dooropen)
 
     show protag with Dissolve(0.2):
         xzoom -1.0

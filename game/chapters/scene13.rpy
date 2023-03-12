@@ -20,12 +20,15 @@ label .truth():
 
   li "Well, uh, that's... that gives me a lot to think about, at least."
   protag think "?"
-  protag "Yes, I'm sure it's a lot to think about. Your \"friend\" seems like they have a lot on their plate."
+  protag "Yes, I'm sure it's a lot to think about. Your {i}friend{/i} seems like they have a lot on their plate."
   show li surprise at hop
   li "!"
-  li blush "Eheh... yeah, they do. Poor guy."
-  protag ""
+  li blush "Eheh... yeah, that's right, they do. Poor guy."
   protag "(I wonder what his deal is?)"
+  protag neutral @ closedeyes "(Ah, oh well. Maybe he's just really concerned for his friend.)"
+  protag "Hopefully your friend will find someone who gets them."
+  li smile @ sad "..."
+  li "Yeah, thanks. I'll pass that along to them."
 
   return
 
@@ -57,5 +60,7 @@ label .joke():
   show protag stubborn at left with dissolve:
     xzoom -1.0
   show li surprise at right with dissolve
+
+  li ""
 
   return

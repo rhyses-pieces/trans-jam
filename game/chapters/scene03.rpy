@@ -1,6 +1,6 @@
 label scene03():
     
-    play music backroom fadein 1.0 fadeout 2.0 volume 0.5 loop
+    play_music(backroom, fadein=1.0, fadeout=2.0, relative_volume=0.5, loop=True)
 
     scene bg backroom with wipeleft
 
@@ -15,7 +15,7 @@ label scene03():
     protag neutral left "Don't worry, you're safe here! Please, take a seat."
     qirin "Okay..." (who_color="#918196")
 
-    play sound doorclose
+    play_sound(doorclose)
 
     show qirin neutral with dissolve
     with Pause(0.5)
@@ -50,18 +50,18 @@ label scene03():
     protag @ blush "Sorry it won't be the powder kind, but I need tea leaves for this to work."
     qirin @ smile "No worries."
 
-    play sound windchimes fadein 1.0 volume 0.75
+    play_sound(windchimes, fadein=1.0, relative_volume=0.75)
 
     narrator "As [protag] prepares a cup of tea for [qirin], there's a faint sound of windchimes jingling lightly in the breeze even though they're indoors."
     
-    play sound teacups fadein 1.0 fadeout 1.0
+    play_sound(teacups, fadein=1.0, fadeout=1.0)
     
     narrator "They sit and chat for a bit while [qirin] sips at their drink."
     qirin smile "(I don't know what I expected, but this is really nice.)"
 
     narrator "They finish their drink not long after, and [protag] motions for their cup. [qirin] hands it over, curious about what's next."
 
-    play sound "audio/clink.mp3"
+    play_sound(clink)
 
     narrator "[protag] suddenly flips the cup upside down on a strange looking teacup tray."
     qirin think "Huh...?"
