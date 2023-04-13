@@ -80,20 +80,24 @@ label start():
     call scene10
     call scene11
     call scene12
+    call scene13
+    call scene14
 
     return
 
 # game endings here
 label end():
     
+    call generic_ending
+
     if truth_ending >= 2:
-        jump truth_ending
+        call truth_ending
     elif desire_ending >= 2:
-        jump desire_ending
+        call desire_ending
     elif joke_ending >= 2:
-        jump joke_ending
+        call joke_ending
     else:
-        jump generic_ending
+        call generic_ending.cafe
 
     call credits
 

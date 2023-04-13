@@ -14,8 +14,10 @@ label scene09():
         jump .truth
     elif reaper_desire:
         jump .desire
-    else:
+    elif reaper_joke:
         jump .joke
+    else:
+        return
 
     return
 

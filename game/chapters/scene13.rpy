@@ -7,8 +7,10 @@ label scene13():
     jump .truth
   elif li_desire:
     jump .desire
-  else:
+  elif li_joke:
     jump .joke
+  else:
+    return
 
   return
 
@@ -57,10 +59,17 @@ label .desire():
 
 label .joke():
 
-  show protag stubborn at left with dissolve:
+  show protag closedeyes at left with dissolve:
     xzoom -1.0
   show li surprise at right with dissolve
 
-  li ""
+  li "Thanks for the warning... {size=0.75}I guess...{/size}"
+  protag @ stubborn "I'm serious! Birds are no joke."
+  protag fear "One time there was a feral pigeon that flew off with my sandwich. I haven't seen it since."
+  li think "The sandwich or the bird?"
+  li neutral @ think "And aren't all pigeons technically feral...?"
+  protag closedeyes "You'd be surprised by how aggressive some of them get during mating season."
+  protag neutral "I hope your friend keeps an eye out for birds... for their sake."
+  li think "Alright then..."
 
   return

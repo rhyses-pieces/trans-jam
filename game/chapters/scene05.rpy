@@ -16,9 +16,11 @@ label scene05():
     elif qirin_desire:
         qirin smile @ happy "It was! Thank you so much."
         jump .desire
-    else:
+    elif qirin_joke:
         qirin think "... the Bahamas?"
         jump .joke
+    else:
+        return
     
     protag @ smile "It was a pleasure doing business with you."
     qirin neutral "Likewise. Thanks again for the reading."

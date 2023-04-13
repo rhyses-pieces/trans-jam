@@ -112,7 +112,7 @@ label .joke():
   protag stubborn "Avoid pigeons too. Apparently those are also incredibly dangerous."
   protag "I once had a client who came to me because there were pigeons mating in front of their window everyday."
   li "What?"
-  protag "Anyway your friend is going to attract a lot of danger in their life. They need to be careful."
+  protag closedeyes "Anyway your friend is going to attract a lot of danger in their life. They need to be careful."
   
   $ jokeEnding += 1
   $ li_joke = True
