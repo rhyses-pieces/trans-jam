@@ -1,15 +1,15 @@
 label scene07():
 
-    play_music(nextday, fadein=1.0, loop=True)
+    $ play_music(nextday, fadein=1.0, loop=True)
     scene bg bedroom with fade
 
     show protag closedeyes at center with dissolve
 
-    play_sound(phone_ring)
+    $ play_sound(phone_ring)
     with Pause(0.25)
 
     show protag at wag
-    play_sound(phone_pickup)
+    $ play_sound(phone_pickup)
 
     protag "Mmm... hello?"
 
@@ -30,7 +30,7 @@ label scene07():
     protag @ happy "Sounds great! See you then."
 
     scene bg cafe with Fade(0.5, 1, 0.5)
-    play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
+    $ play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
 
     show protag at right with dissolve
     with Pause(0.5)
@@ -66,7 +66,7 @@ label scene07():
     protag "Come on back!"
 
     with Pause(0.25)
-    play_sound(dooropen)
+    $ play_sound(dooropen)
 
     show protag with Dissolve(0.2):
         xzoom -1.0

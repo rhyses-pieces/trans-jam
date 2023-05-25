@@ -12,7 +12,7 @@ label scene12():
   protag smile "(Oh well, I'm just here to do a love reading.)"
   protag neutral "Let's see..."
 
-  play_sound(clink)
+  $ play_sound(clink)
 
   window hide
 

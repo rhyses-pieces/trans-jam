@@ -8,7 +8,7 @@ label scene04():
     qirin right "Oh! Um... I was born in the year of the {b}ram{/b}."
     protag "I see. I'll open this and..."
 
-    play_sound(clink)
+    $ play_sound(clink)
 
     window hide
 
@@ -42,7 +42,7 @@ label scene04():
 
 label .truth():
 
-    play_music(backroom, fadein=1.0, relative_volume=0.5, loop=True)
+    $ play_music(backroom, fadein=1.0, relative_volume=0.5, loop=True)
 
     protag sad @ closedeyes "I'll be honest - things don't look great."
     protag "Winter is always a difficult time because of the cold, food shortages, and long nights."
@@ -58,7 +58,7 @@ label .truth():
 
 label .desire():
 
-    play_music(backroom, fadein=1.0, relative_volume=0.5, loop=True)
+    $ play_music(backroom, fadein=1.0, relative_volume=0.5, loop=True)
 
     protag neutral "Things may be looking in your favor."
     protag @ smile "Winter represents hardships, but you may find support from people around you."
@@ -73,7 +73,7 @@ label .desire():
 
 label .joke():
 
-    play_music(backroom, fadein=1.0, relative_volume=0.5, loop=True)
+    $ play_music(backroom, fadein=1.0, relative_volume=0.5, loop=True)
     
     protag stubborn "Go to the Bahamas."
     protag "Winter implies that the people around you will work hard to prepare for the worst."

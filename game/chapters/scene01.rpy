@@ -1,6 +1,6 @@
 label scene01():
 
-    play_music(cafe, fadein=1.0, loop=True)
+    $ play_music(cafe, fadein=1.0, loop=True)
 
     scene bg cafe with fade
     

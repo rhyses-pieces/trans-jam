@@ -1,5 +1,5 @@
 label scene10():
-    play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
+    $ play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
     scene bg cafe with Fade(0.5, 1, 0.5)
 
     show protag smile at right with fade
@@ -22,7 +22,7 @@ label scene10():
 
     narrator "While [protag] is preparing [reaper]'s drink, the door to the cafe opens."
 
-    play_sound(dooropen)
+    $ play_sound(dooropen)
 
     show li neutral at center:
         xzoom -1.0
@@ -92,7 +92,7 @@ label scene10():
     with Pause(0.5)
     hide reaper
 
-    play_sound(dooropen)
+    $ play_sound(dooropen)
 
     narrator "[reaper] takes her drink and makes a beeline for the exit. [protag] is left feeling confused, wondering about the strange change in her attitude."
     narrator "Meanwhile..."
