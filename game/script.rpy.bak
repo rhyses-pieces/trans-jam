@@ -68,36 +68,36 @@ label start():
 
     stop music fadeout 1.0
 
-    call scene01 from _call_scene01
-    call scene02 from _call_scene02
-    call scene03 from _call_scene03
-    call scene04 from _call_scene04
-    call scene05 from _call_scene05
-    call scene06 from _call_scene06
-    call scene07 from _call_scene07
-    call scene08 from _call_scene08
-    call scene09 from _call_scene09
-    call scene10 from _call_scene10
-    call scene11 from _call_scene11
-    call scene12 from _call_scene12
-    call scene13 from _call_scene13
-    call scene14 from _call_scene14
+    call scene01
+    call scene02
+    call scene03
+    call scene04
+    call scene05
+    call scene06
+    call scene07
+    call scene08
+    call scene09
+    call scene10
+    call scene11
+    call scene12
+    call scene13
+    call scene14
 
     jump end
 
 # game endings here
 label end():
     
-    call generic_ending from _call_generic_ending
+    call generic_ending
 
     if truth_ending >= 2:
-        call truth_ending from _call_truth_ending
+        call truth_ending
     elif desire_ending >= 2:
-        call desire_ending from _call_desire_ending
+        call desire_ending
     elif joke_ending >= 2:
-        call joke_ending from _call_joke_ending
+        call joke_ending
     else:
-        call generic_ending.cafe from _call_generic_ending_cafe
+        call generic_ending.cafe
 
     call screen credits
 
