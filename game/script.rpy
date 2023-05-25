@@ -99,6 +99,6 @@ label end():
     else:
         call generic_ending.cafe
 
-    call credits
+    call screen credits
 
     return

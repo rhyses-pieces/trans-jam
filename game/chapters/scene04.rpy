@@ -32,11 +32,11 @@ label scene04():
         "What kind of interpretation do you want to convey?"
         
         "Tell the truth.":
-            jump .truth
+            jump scene04.truth
         "Lean into what [qirin] wants.":
-            jump .desire
+            jump scene04.desire
         "Just go with whatever.":
-            jump .joke
+            jump scene04.joke
 
     return
 

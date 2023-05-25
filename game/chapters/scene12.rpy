@@ -36,11 +36,11 @@ label scene12():
     "What kind of interpretation do you want to convey?"
 
     "Talk about the possible matches.":
-      jump .truth
+      jump scene12.truth
     "Make his friend seem popular.":
-      jump .desire
+      jump scene12.desire
     "His prospects are going to be wild.":
-      jump .joke
+      jump scene12.joke
 
   return
 

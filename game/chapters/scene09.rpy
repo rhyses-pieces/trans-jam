@@ -32,7 +32,7 @@ label .truth():
     protag "You've proven to the heavens and hells - literally! - that you're exceptionally talented."
     protag @ angry "It's their loss. Fuck them."
 
-    show reaper surpise at hop
+    show reaper surprise at hop
     reaper "!"
     
     protag neutral "I know that whatever {i}you{/i} decide to do next, you'll be okay."

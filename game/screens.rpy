@@ -1709,6 +1709,8 @@ screen credits():
                     vbox:
                         text "Sprite Animation Utilities"
                         text "{a=https://github.com/nyaatrap/renpy-utilities}nyaatrap{/a}"
+    
+    timer 0.5 action Return()
 
 style credits_hbox:
     spacing 40
@@ -1721,4 +1723,4 @@ style credits_text:
     xalign 0.5
     color "#c7b9a7"
     outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
-    hyperlink_functions (hyperlink_text, hyperlink_function, None)
+    hyperlink_functions (style.hyperlink_text, hyperlink_function, None)

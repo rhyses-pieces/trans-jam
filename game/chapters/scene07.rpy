@@ -51,7 +51,7 @@ label scene07():
     protag @ surprise "What?! How?!"
     reaper "They said it was something about workforce reduction..."
     protag stubborn "That literally makes no sense!"
-    protag @ mad "How do you justify reducing the workforce for the literal {i}afterlife{/i}?"
+    protag @ angry "How do you justify reducing the workforce for the literal {i}afterlife{/i}?"
     narrator "[reaper] works as a grim reaper - the kind that ferries the recently deceased to Heaven or Hell."
     narrator "Or, well. She {i}used{/i} to work as a grim reaper."
     reaper "I dunno... but right now, I'm out of a job."

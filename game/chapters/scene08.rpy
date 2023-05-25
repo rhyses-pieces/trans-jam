@@ -48,11 +48,11 @@ label scene08():
     menu reaper_choice:
         "What should you say to her?"
         "Be honest.":
-            jump .truth
+            jump scene08.truth
         "Tell her what she wants to hear.":
-            jump .desire
+            jump scene08.desire
         "\"You should get into pottery.\"":
-            jump .joke
+            jump scene08.joke
 
     return
 
@@ -60,7 +60,7 @@ label .truth():
 
     protag closedeyes "I had a hard time parsing your reading, but here's what I can say about it."
     protag neutral "Autumn represents twilight - when harvest takes place and life withers before the winter season."
-    protag thinking "Those born under the sign of the rooster could stand in your way, forcing you to take a direction you may not have taken otherwise."
+    protag think "Those born under the sign of the rooster could stand in your way, forcing you to take a direction you may not have taken otherwise."
     protag sad "This might mean that there won't be as many opportunities heading your way as you'd like..."
     protag neutral @ smile "But that doesn't mean it's a bad thing. It's a good time to reflect and discover new things about yourself."
     
@@ -72,7 +72,7 @@ label .truth():
 label .desire():
 
     protag "I think... things will be looking up for you."
-    protag thinking "Here, spring represents new beginnings, hope, the thawing of winter."
+    protag think "Here, spring represents new beginnings, hope, the thawing of winter."
     protag smile "In addition, you might find help from those born under the signs of the pig and ox."
     protag "This is a chance for you to discover your potential, in a sense!"
     protag neutral "Even though you're going through a setback, success will find its way to you. You just need to work for it."
