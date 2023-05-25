@@ -83,7 +83,7 @@ label start():
     call scene13
     call scene14
 
-    return
+    jump end
 
 # game endings here
 label end():

@@ -48,11 +48,11 @@ label scene08():
     menu reaper_choice:
         "What should you say to her?"
         "Be honest.":
-            jump scene08.truth
+            jump .truth
         "Tell her what she wants to hear.":
-            jump scene08.desire
+            jump .desire
         "\"You should get into pottery.\"":
-            jump scene08.joke
+            jump .joke
 
     return
 

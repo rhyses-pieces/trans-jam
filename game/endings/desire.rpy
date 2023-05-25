@@ -1,11 +1,9 @@
 label desire_ending():
   
-  if li_desire:
-    call .love_ending
-
   scene bg cafe with fade
+  show protag think at center with dissolve
 
-  narrator ""
+  narrator "The cafe becomes known for its indulgent fortune readings, and more people flock to the Zodiac Cafe for more than just coffee. Customers wish to hear their deepest desires fulfilled in way that serves them best. [protag] is never quite sure if his readings are truthful or not."
 
   return
 

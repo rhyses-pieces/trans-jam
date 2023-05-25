@@ -99,7 +99,7 @@ init python:
     phone_pickup : _("Someone picks up the phone call"),
     phone_ring : _("A phone rings"),
     confirm : _("Menu item selection confirmed"),
-    close : _("Menu item closed"),
+    close : _("Menu closed"),
     cancel : _("Menu item selection canceled"),
     select : _("Menu item selected"),
     teacups : _("Teacups being brought out"),
