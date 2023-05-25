@@ -1089,6 +1089,11 @@ screen help():
 
     tag menu
 
+    if main_menu:
+        add gui.main_menu_background
+    else:
+        add gui.game_menu_background
+
     default device = "keyboard"
 
     use game_menu(_("Help"), scroll="viewport"):
@@ -1217,6 +1222,7 @@ screen gamepad_help():
     textbutton _("Calibrate") action GamepadCalibrate()
 
 
+style help_frame is empty 
 style help_button is gui_button
 style help_button_text is gui_button_text
 style help_label is gui_label

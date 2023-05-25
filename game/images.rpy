@@ -28,8 +28,8 @@ layeredimage li:
     group emote auto:
         attribute neutral default
 
-image side li left = LayeredImageProxy('li', Transform(xalign = 0.0, xzoom = -1.0))
-image side li right = LayeredImageProxy('li', Transform(xalign = 1.0, xzoom = 1.0))
+image side li left = LayeredImageProxy('li', Transform(xalign = 0.0, zoom = 0.8, xzoom = -1.0))
+image side li right = LayeredImageProxy('li', Transform(xalign = 1.0, zoom = 0.8, xzoom = 1.0))
 
 # protagonist
 layeredimage protag:
@@ -37,8 +37,8 @@ layeredimage protag:
     group emote auto:
         attribute neutral default
 
-image side protag left = LayeredImageProxy('protag',Transform(xalign = 0.0, xzoom = -1.0))
-image side protag right = LayeredImageProxy('protag',Transform(xalign = 1.0, xzoom = 1.0))
+image side protag left = LayeredImageProxy('protag',Transform(xalign = 0.0, zoom = 0.8, xzoom = -1.0))
+image side protag right = LayeredImageProxy('protag',Transform(xalign = 1.0,zoom = 0.8, xzoom = 1.0))
 
 # qirin
 layeredimage qirin:
@@ -46,8 +46,8 @@ layeredimage qirin:
     group emote auto:
         attribute neutral default
 
-image side qirin left = LayeredImageProxy('qirin', Transform(xalign = 0.0))
-image side qirin right = LayeredImageProxy('qirin', Transform(xalign = 1.0, xzoom = -1.0))
+image side qirin left = LayeredImageProxy('qirin', Transform(xalign = 0.0, zoom = 0.8))
+image side qirin right = LayeredImageProxy('qirin', Transform(xalign = 1.0, zoom = 0.8, xzoom = -1.0))
 
 # reaper
 layeredimage reaper:
@@ -55,5 +55,5 @@ layeredimage reaper:
     group emote auto:
         attribute neutral default
 
-image side reaper left = LayeredImageProxy('reaper', Transform(xalign = 0.0))
-image side reaper right = LayeredImageProxy('reaper', Transform(xalign = 1.0))
+image side reaper left = LayeredImageProxy('reaper', Transform(xalign = 0.0, zoom = 0.8))
+image side reaper right = LayeredImageProxy('reaper', Transform(xalign = 1.0, zoom = 0.8))

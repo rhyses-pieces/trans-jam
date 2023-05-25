@@ -26,12 +26,13 @@ label scene11():
     li blush "Haha... That's a little embarrassing, but my friend was looking for um..."
     li "Love advice? I guess? It was weird..."
     with Pause(0.25)
-    show protag with bow
+    show protag at bow
+    with Pause(0.5)
     protag @ smile "It's not weird at all. I think that's very sweet that you're looking out for your friend."
     protag @ think "What's your favorite tea?"
     li @ smile "I like chai with some milk and sugar."
     with Pause(0.25)
-    show protag with bow
+    show protag at bow
     protag neutral @ happy "You got it."
 
     $ play_sound(teacups, fadein=1.0)

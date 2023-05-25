@@ -8,12 +8,12 @@ label scene04():
     qirin right "Oh! Um... I was born in the year of the {b}ram{/b}."
     protag "I see. I'll open this and..."
 
+    window hide
+    with Pause(2)
     $ play_sound(clink)
 
-    window hide
-
     scene bg zodiac_qirin with dissolve
-    with Pause(0.5)
+    with Pause(1)
 
     protag think left "Hmmm..."
     protag "(Well, it looks like {i}some{/i} of the tea leaves are covering the {b}ram{/b} sign...)"

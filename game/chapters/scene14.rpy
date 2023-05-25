@@ -8,6 +8,7 @@ label scene14():
   show protag smile at center with fade
   with Pause(0.25)
 
+  show protag at hop
   protag @ happy "Order up!"
 
   return

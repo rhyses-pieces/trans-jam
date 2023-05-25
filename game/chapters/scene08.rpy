@@ -29,9 +29,10 @@ label scene08():
     stop sound fadeout 1.0
 
     scene bg zodiac_covered with wipeup
-    with Pause(1)
+    with Pause(2)
     $ play_sound(clink)
     scene bg zodiac_reaper with dissolve
+    with Pause(1)
 
     protag think left "Huh..."
     protag "You were born in the year of the {b}rabbit{/b}, right?"

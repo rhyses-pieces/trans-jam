@@ -18,7 +18,6 @@ init python:
 ## GUI Configuration Variables
 ################################################################################
 
-
 ## Colors ######################################################################
 ##
 ## The colors of text in the interface.
@@ -50,7 +49,7 @@ define gui.hover_muted_color = '#575c69'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#a98869'
-define gui.interface_text_color = '#c7b9a7'
+define gui.interface_text_color = '#ad9276'
 
 ## Fonts and Font Sizes ########################################################
 
@@ -187,7 +186,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(10, 4, 10, 4)
 
 define gui.quick_button_borders = Borders(10, 4, 10, 0)
-define gui.quick_button_text_size = 24
+define gui.quick_button_text_size = 20
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 

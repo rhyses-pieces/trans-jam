@@ -12,12 +12,12 @@ label scene12():
   protag smile "(Oh well, I'm just here to do a love reading.)"
   protag neutral "Let's see..."
 
+  window hide
+  with Pause(2)
   $ play_sound(clink)
 
-  window hide
-
   scene bg zodiac_li with dissolve
-  with Pause(0.5)
+  with Pause(1)
 
   protag neutral "(There's a lot of leaves in the {b}spring{/b} season. {nw}"
   show protag think 
@@ -53,7 +53,7 @@ label .truth():
   extend "but there will be conflict in their love life."
   protag neutral "On one hand, they won't want for company."
   protag @ sad "On the other hand, that means they'll have a hard time finding their match."
-  show li surprise with hop
+  show li surprise at hop
   with Pause(0.25)
   li "!"
   li think "..."
@@ -74,7 +74,7 @@ label .desire():
   protag neutral "Your friend seems like they might find a potential match in many signs."
   protag "Among them are those born under the {b}rabbit{/b}, {b}dragon{/b}, and {b}snake{/b} signs."
   li @ think "(Wait...)"
-  show li surprise with hop
+  show li surprise at hop
   with Pause(0.25)
   li neutral @ think "Can I ask what sign you are?"
   show protag surprise with hpunch
@@ -84,12 +84,12 @@ label .desire():
   protag "I was born under the {b}dragon{/b} sign."
   li "..."
   li smile @ happy "I heard that they pair well with {b}roosters{/b}."
-  show protag surprise with hop
+  show protag surprise at hop
   with Pause(0.25)
   protag "!"
   protag blush "Y-yeah? What does that have to do with anything?"
   li @ closedeyes "I have to be honest-- I'm not here for my friend."
-  protag "... {i}Oh{/i}."
+  protag "... Oh."
   
   $ desireEnding += 1
   $ li_desire = True

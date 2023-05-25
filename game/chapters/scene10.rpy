@@ -2,8 +2,8 @@ label scene10():
     $ play_music(cafe, fadein=1.0, fadeout=2.0, loop=True)
     scene bg cafe with Fade(0.5, 1, 0.5)
 
-    show protag smile at right with fade
-    show reaper smile at left with fade
+    show protag smile at right with dissolve
+    show reaper smile at left with dissolve
     
     with Pause(0.5)
 
@@ -18,6 +18,7 @@ label scene10():
         pause 0.5
 
     hide protag with dissolve
+    with Pause(0.5)
     hide reaper with dissolve
 
     narrator "While [protag] is preparing [reaper]'s drink, the door to the cafe opens."
@@ -48,16 +49,15 @@ label scene10():
         pause 0.5
     reaper "Psst. Hey."
     show reaper at move_left
-    with Pause(0.5)
-    show reaper at left
 
     show protag neutral at right:
         xzoom -1.0
         inR()
-        pause 0.5
-        dissolve(0.5)
+        pause 1
         xzoom 1.0
         pause 0.5
+
+    with Pause(1.5)
     
     protag "Hm? What's up?"
     reaper "I think your employee is here..."
@@ -68,7 +68,7 @@ label scene10():
     show reaper surprise at hop
     with Pause(0.5)
 
-    show reaper neutral at move_center
+    show reaper at move_center
 
     show li neutral at left:
         inL()
@@ -76,8 +76,8 @@ label scene10():
     with Pause(0.5)
 
     li "Is she a friend of yours?"
-    protag smile "Oh! Yeah. We go way back, actually."
-    protag neutral "Let me introduce you guys - [reaper], this is [li]. [li], this is [reaper]."
+    protag neutral "Oh! Yeah. We go way back, actually."
+    protag smile "Let me introduce you guys - [reaper], this is [li]. [li], this is [reaper]."
     reaper @ smile "Hello."
     li @ smile "Nice to meet you."
     protag smile "I just finished up with giving [reaper] a reading, and I'm making her a drink."
@@ -105,7 +105,7 @@ label scene10():
     protag @ smile "Is there anything you want to talk about?"
     li @ blush "O-oh. Ha ha..."
     li "Actually, I was wondering if... you know... you could do a reading on me too."
-    protag @ surprise "Huh?"
+    protag neutral @ surprise "Huh?"
     li @ blush "Yeah! Um. I have a friend of mine who's going through some stuff..."
     li "And I was wondering if, um, you could do a reading on that?"
     protag @ think "I mean, sure! If you want."
