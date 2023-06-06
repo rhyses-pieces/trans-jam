@@ -2,7 +2,7 @@
 
 The Zodiac Cafe is known for their coffee and tea selection--but it's infamous among the local supernatural community for the cafe owner's coffee readings. 
 
-<img src="" style="float:left" />
+<img src="/blob/main/game/gui/main_menu.png" style="float:left" />
 
 ## Comments
 
