@@ -341,8 +341,8 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
-    hover_outlines [ (absolute(3), "#e3decf", absolute(0), absolute(0)) ]
+    outlines [ (absolute(3), "#e3decf", absolute(0), absolute(0)) ]
+    hover_outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
     selected_outlines [ (absolute(3), "#c7b9a700", absolute(0), absolute(0)) ]
 
 
@@ -356,27 +356,31 @@ screen title_menu():
 
     style_prefix "title_menu"
 
-    hbox:
+    vbox:
         
-        imagebutton auto "gui/start %s.png" action Start() alt _("Start")
-        imagebutton auto "gui/load %s.png" action ShowMenu("load") alt _("Load")
+        hbox:
+            imagebutton auto "gui/start %s.png" action Start() alt _("Start")
+            imagebutton auto "gui/load %s.png" action ShowMenu("load") alt _("Load")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            imagebutton auto "gui/help %s.png" action ShowMenu("help") alt _("Help")
+                ## Help isn't necessary or relevant to mobile devices.
+                imagebutton auto "gui/help %s.png" action ShowMenu("help") alt _("Help")
 
-        imagebutton auto "gui/pref %s.png" action ShowMenu("preferences") alt _("Options")
-        imagebutton auto "gui/quit %s.png" action Quit(confirm=True) alt _("Quit")
+        hbox:
+            imagebutton auto "gui/pref %s.png" action ShowMenu("preferences") alt _("Options")
+            imagebutton auto "gui/quit %s.png" action Quit(confirm=True) alt _("Quit")
 
-style title_menu_hbox:
+style title_menu_vbox:
     yoffset -10
     xsize 500
     ysize 150
-    box_wrap True
     align (0.5, 0.5)
     spacing gui.navigation_spacing
-    box_wrap_spacing 20
+
+style title_menu_hbox:
+    xalign 0.5
+    spacing 20
 
 style title_menu_image_button:
     hover_sound "audio/select.ogg"
@@ -746,6 +750,12 @@ style slot_button:
 
 style slot_button_text:
     properties gui.button_text_properties("slot_button")
+    bold True
+    idle_color "#885138"
+    hover_color "#936656"
+    selected_color "#42465b"
+    selected_idle_color "#42465b"
+    selected_hover_color "#936656"
 
 
 ## Preferences screen ##########################################################
@@ -1099,24 +1109,25 @@ screen help():
     use game_menu(_("Help"), scroll="viewport"):
 
         style_prefix "help"
+        
+        frame:
+            vbox:
+                spacing 15
 
-        vbox:
-            spacing 15
+                hbox:
 
-            hbox:
+                    textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+                    textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                    if GamepadExists():
+                        textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
-
-            if device == "keyboard":
-                use keyboard_help
-            elif device == "mouse":
-                use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+                if device == "keyboard":
+                    use keyboard_help
+                elif device == "mouse":
+                    use mouse_help
+                elif device == "gamepad":
+                    use gamepad_help
 
 
 screen keyboard_help():
@@ -1222,7 +1233,9 @@ screen gamepad_help():
     textbutton _("Calibrate") action GamepadCalibrate()
 
 
-style help_frame is empty 
+style help_frame is gui_frame:
+    xfill True
+    ypadding 25
 style help_button is gui_button
 style help_button_text is gui_button_text
 style help_label is gui_label
@@ -1645,88 +1658,129 @@ style slider_slider:
 ################################################################################
 
 transform credits_scroll(speed):
-    ypos 720
-    linear speed ypos -720
+    ypos 900
+    linear speed ypos -900
 
 screen credits():
     style_prefix "credits"
 
-    frame at credits_scroll(5.0):
-        background "game_menu"
+    add gui.game_menu_background
+
+    frame at credits_scroll(25):
         xalign 0.5
 
         vbox:
-            label "Credits"
+            label "Credits" style "credits_header"
 
             null height 20
 
-            hbox:
-                text "Art, Programming, Writing"
-                text "Rhys"
-
-            hbox:
-                text "Editing"
-                text "Andy Paradox"
-            
-            hbox:
-                text "Editing"
-                text "unlockthelore"
-
             vbox:
-                text "BGM"
-
-                hbox:
-                    vbox:
-                        text "{a=https://incompetech.com/}Kevin MacLeod{/a}"
-                    vbox:
-                        text "{a=https://mayragandra.itch.io/freeambientmusic}Mayra{/a}"
+                text "Art, Programming, Writing" style "credits_title"
                 
                 hbox:
                     vbox:
-                        text "{a=https://ryusuke0215.itch.io/piano-music2}Nid{/a}"
-                    vbox:
-                        text "{a=https://potat0master.itch.io/free-background-music-for-visual-novels-bgm-pack-1}potat0master{/a}"
-                    
-            
-            vbox: 
-                text "SFX"
+                        text "Rhys"
 
-                hbox:
-                    vbox:
-                        text "{a=https://dmochas-assets.itch.io/dmochas-bleeps-pack}dmochas-assets{/a}"
-                    vbox:
-                        text "{a=https://souptonic.itch.io/souptonic-sfx-pack-1-ui-sounds}SoupTonic{/a}"
-            
+            null height 10
+
             vbox:
-                text "Programming Assets"
+                text "Editing" style "credits_title"
 
                 hbox:
                     vbox:
-                        text "Auto Highlight"
-                        text "{a=https://github.com/SoDaRa/Auto-Highlight}SoDaRa{/a}"
+                        text "Andy Paradox"
                     vbox:
-                        text "Caption Tool"
-                        text "{a=https://npckc.itch.io/caption-tool-for-renpy}NPCKC{/a}"
+                        text "unlockthelore"
+            
+            null height 10
+
+            # vbox:
+            #     text "Testing"
+
+            #     hbox:
+            #         vbox:
+            #             text "Andy Paradox"
+            #         vbox:
+            #             text "Dom"
+
+            vbox:
+                text "BGM" style "credits_title"
 
                 hbox:
                     vbox:
-                        text "Separate History Screen"
-                        text "{a=https://tofurocks.itch.io/renpy-history}tofurocks{/a}"
+                        textbutton "Kevin MacLeod" action OpenURL("https://incompetech.com/")
                     vbox:
-                        text "Sprite Animation Utilities"
-                        text "{a=https://github.com/nyaatrap/renpy-utilities}nyaatrap{/a}"
-    
-    timer 0.5 action Return()
+                        textbutton "Mayra" action OpenURL("https://mayragandra.itch.io/freeambientmusic")
+                
+                hbox:
+                    vbox:
+                        textbutton "Nid" action OpenURL("https://ryusuke0215.itch.io/piano-music2")
+                    vbox:
+                        textbutton "potat0master" action OpenURL("https://potat0master.itch.io/free-background-music-for-visual-novels-bgm-pack-1")
+                    
+            null height 10
+
+            vbox: 
+                text "SFX" style "credits_title"
+
+                hbox:
+                    vbox:
+                        textbutton "dmochas-assets" action OpenURL("https://dmochas-assets.itch.io/dmochas-bleeps-pack")
+                    vbox:
+                        textbutton "SoupTonic" action OpenURL("https://souptonic.itch.io/souptonic-sfx-pack-1-ui-sounds")
+            
+            null height 10
+
+            vbox:
+                text "Programming Assets" style "credits_title"
+
+                hbox:
+                    vbox:
+                        textbutton "SoDaRa" action OpenURL("https://github.com/SoDaRa/Auto-Highlight")
+                    vbox:
+                        textbutton "NPCKC" action OpenURL("https://npckc.itch.io/caption-tool-for-renpy")
+
+                hbox:
+                    vbox:
+                        textbutton "tofurocks" action OpenURL("https://tofurocks.itch.io/renpy-history")
+                    vbox:
+                        textbutton "nyaatrap" action OpenURL("https://github.com/nyaatrap/renpy-utilities")
+
+    timer 25 action [Hide("credits", Fade(1, 0, 0.5)), Return()]
+
+style credits_button is gui_button
+style credits_button is gui_button_text
+
+style credits_frame:
+    padding (25, 20)
 
 style credits_hbox:
+    xalign 0.5
     spacing 40
     ysize 30
 
-style credits_label:
+style credits_vbox:
+    xalign 0.5
+    spacing 20
+
+style credits_header_text:
+    size 60
+    text_align 0.5
+
+style credits_header:
     xalign 0.5
 
-style credits_text:
+style credits_title:
     xalign 0.5
-    color "#c7b9a7"
+    size 40
+    bold True
+
+style credits_text is gui_text:
+    text_align 0.5
+
+style credits_button_text:
+    text_align 0.5
+    idle_color "#fff"
+    hover_color "#885138"
     outlines [ (absolute(3), "#885138", absolute(0), absolute(0)) ]
-    hyperlink_functions (style.hyperlink_text, hyperlink_function, None)
+    hover_outlines [ (absolute(3), "#e3decf", absolute(0), absolute(0)) ]

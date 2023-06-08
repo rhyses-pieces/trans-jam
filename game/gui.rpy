@@ -26,14 +26,14 @@ init python:
 define gui.accent_color = '#885138'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#c7b9a7'
+define gui.idle_color = '#936656'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#ad9276'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#936656'
+define gui.hover_color = '#c7b9a7'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -49,7 +49,7 @@ define gui.hover_muted_color = '#575c69'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#a98869'
-define gui.interface_text_color = '#ad9276'
+define gui.interface_text_color = '#a47767'
 
 ## Fonts and Font Sizes ########################################################
 
@@ -350,7 +350,7 @@ define gui.history_name_xalign = 1.0
 ## The position, width, and alignment of the dialogue text.
 define gui.history_text_xpos = 170
 define gui.history_text_ypos = 2
-define gui.history_text_width = 740
+define gui.history_text_width = 600
 define gui.history_text_xalign = 0.0
 
 

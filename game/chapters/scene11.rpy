@@ -58,7 +58,7 @@ label scene11():
     protag @ think "Hmmm..."
     protag smile @ happy "Well, if you say so!"
 
-    narrator "The two of them enjoy their aromantic, subtly spiced drinks. When they're finished, [li] hands his empty cup to [protag]."
+    narrator "The two of them enjoy their aromatic, subtly spiced drinks. When they're finished, [li] hands his empty cup to [protag]."
     show protag blush
     show li blush
     extend "Their fingers slightly touch."

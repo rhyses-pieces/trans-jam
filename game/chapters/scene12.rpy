@@ -4,8 +4,7 @@ label scene12():
   with Pause(0.5)
 
   protag smile left "Can I ask what zodiac sign you are?"
-  li surprise right "Oh! Yeah, I can."
-  li neutral @ smile "I was born under the {b}rooster{/b} sign."
+  li right "Oh! Yeah, I was born under the {b}rooster{/b} sign."
   protag neutral @ surprise "!"
   protag @ happy "Nice, okay! That's great info."
   protag @ think "(Huh, that's kinda funny since I'm a {b}dragon{/b} sign.)"
@@ -39,7 +38,7 @@ label scene12():
       jump scene12.truth
     "Make his friend seem popular.":
       jump scene12.desire
-    "His prospects are going to be wild.":
+    "Forget the prospects. What about {i}birds{/i}?":
       jump scene12.joke
 
   return

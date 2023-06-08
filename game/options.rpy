@@ -179,6 +179,8 @@ init python:
     ## Classify files as None to exclude them from the built distributions.
 
     build.classify('**~', None)
+    build.classify('**.json', None)
+    build.classify('**.txt', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)

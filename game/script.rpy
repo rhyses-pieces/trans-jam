@@ -90,11 +90,11 @@ label end():
     
     call generic_ending from _call_generic_ending
 
-    if truth_ending >= 2:
+    if truthEnding >= 2:
         call truth_ending from _call_truth_ending
-    elif desire_ending >= 2:
+    elif desireEnding >= 2:
         call desire_ending from _call_desire_ending
-    elif joke_ending >= 2:
+    elif jokeEnding >= 2:
         call joke_ending from _call_joke_ending
     else:
         call generic_ending.cafe from _call_generic_ending_cafe
