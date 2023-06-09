@@ -9,7 +9,7 @@ label scene04():
     protag "I see. I'll open this and..."
 
     window hide
-    with Pause(2)
+    with Pause(1.5)
     $ play_sound(clink)
 
     scene bg zodiac_qirin with dissolve
@@ -31,7 +31,7 @@ label scene04():
 
         "What kind of interpretation do you want to convey?"
         
-        "Tell the truth.":
+        "Talk about the potential fallout.":
             jump scene04.truth
         "Lean into what [qirin] wants.":
             jump scene04.desire

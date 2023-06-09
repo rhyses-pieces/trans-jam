@@ -63,7 +63,7 @@ label generic_ending():
     elif li_desire:
         jump desire_ending.love_ending
     elif li_joke:
-        show li fear with dissolve
+        show li fear at shake with dissolve
 
         narrator "Though he respected [protag], [li] didn't quite take the ominous warning seriously."
         narrator "Eventually, he experienced a string of bad luck whenever birds were around him."
@@ -77,7 +77,7 @@ label .cafe():
 
     # return to cafe
     scene bg cafe with fade
-    show protag smile at center with dissolve
+    show protag happy at center with dissolve
 
     narrator "Though [protag] read fortunes at the cafe, it didn't quite the garner a reputation for being a fortune-reading establishment."
     narrator "But they still brewed a damn good cup of coffee and served really cute pastries."

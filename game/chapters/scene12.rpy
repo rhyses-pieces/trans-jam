@@ -12,7 +12,7 @@ label scene12():
   protag neutral "Let's see..."
 
   window hide
-  with Pause(2)
+  with Pause(1.5)
   $ play_sound(clink)
 
   scene bg zodiac_li with dissolve
@@ -107,7 +107,7 @@ label .joke():
   li surprise "... Huh??"
   protag @ stubborn "Your friend {i}needs{/i} to avoid birds, especially chickens."
   protag "It's imperative for their survival."
-  li @ fear "{b}Huh?{/b}"
+  li fear "{b}Huh?{/b}"
   protag stubborn "Avoid pigeons too. Apparently those are also incredibly dangerous."
   protag "I once had a client who came to me because there were pigeons mating in front of their window everyday."
   li "What?"

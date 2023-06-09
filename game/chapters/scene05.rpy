@@ -53,7 +53,9 @@ label .joke():
     protag @ stubborn "Yes. The Bahamas."
     protag "The southernly direction leans towards positivity for you."
     qirin "...Okay? If you say so, I guess..."
-    qirin "Actually, wait. Now that you mention it.."
+    qirin neutral "Actually, wait. {nw}"
+    show qirin think
+    extend "Now that you mention it..."
     qirin neutral @ happy "My partner mentioned wanting to go somewhere tropical!"
     protag @ happy "It all works out!"
     

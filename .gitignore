@@ -1,4 +1,5 @@
 game/saves
+game/images
 
 **/*.rpyc
 **/*.rpyc.bak

@@ -12,7 +12,8 @@ label desire_ending():
 label .love_ending():
 
   scene black with fade
-  show li blush at center with fade
+  show li blush at left with dissolve
+  show protag smile at right with dissolve
 
   narrator "[li] was able to finally confess his feelings for [protag]."
   narrator "They've been going out since then and still going strong."

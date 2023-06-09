@@ -1688,7 +1688,7 @@ screen credits():
 
                 hbox:
                     vbox:
-                        text "Andy Paradox"
+                        text "Andy Paradoxic"
                     vbox:
                         text "unlockthelore"
             

@@ -29,7 +29,7 @@ label scene08():
     stop sound fadeout 1.0
 
     scene bg zodiac_covered with wipeup
-    with Pause(2)
+    with Pause(1.5)
     $ play_sound(clink)
     scene bg zodiac_reaper with dissolve
     with Pause(1)
@@ -48,11 +48,11 @@ label scene08():
 
     menu reaper_choice:
         "What should you say to her?"
-        "Be honest.":
+        "Be open about the good and bad.":
             jump scene08.truth
-        "Tell her what she wants to hear.":
+        "Tell her of the potential successes.":
             jump scene08.desire
-        "\"You should get into pottery.\"":
+        "Make something up, quick!!":
             jump scene08.joke
 
     return
