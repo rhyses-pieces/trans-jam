@@ -36,12 +36,13 @@
 
 default persistent.sound_captions = False
 default persistent.image_captions = False
-default persistent.gui_font = "fonts/brassmono.ttf"
 default persistent.caption = False
 
 label splashscreen:
 
-    scene black
+    scene bg cafe
+    image color = Solid("#b8a18085")
+    show color
     if not persistent.caption:
         menu:
             "Do you want sound captions on? They describe music and sound effects in text."
@@ -81,10 +82,6 @@ init python:
     # example = "audio/examplefile.ogg"
     phone_pickup = "audio/phone_pickup.ogg"
     phone_ring = "audio/phone_ring.ogg"
-    confirm = "audio/confirm.ogg"
-    close = "audio/close.ogg"
-    cancel = "audio/cancel.ogg"
-    select = "audio/select.ogg"
     teacups = "audio/teacups.ogg"
     clink = "audio/clink.mp3"
     windchimes = "audio/windchimes.ogg"
@@ -99,10 +96,6 @@ init python:
     # example: _("Example text here"),
     phone_pickup : _("Someone picks up the phone call"),
     phone_ring : _("A phone rings"),
-    confirm : _("Menu item selection confirmed"),
-    close : _("Menu closed"),
-    cancel : _("Menu item selection canceled"),
-    select : _("Menu item selected"),
     teacups : _("Teacups being brought out"),
     clink : _("Teacup clinks"),
     windchimes : _("Windchimes ring"),

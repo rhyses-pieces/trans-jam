@@ -46,21 +46,19 @@ label scene12():
 label .truth():
 
   protag "I have good news {i}or{/i} bad news, depending on how you view it."
-  li think @ fear "Huh? Okay..."
+  li think @ fear right "Huh? Okay..."
   protag "Your friend's prospects are bountiful-- {nw}"
   show protag closedeyes
   extend "but there will be conflict in their love life."
   protag neutral "On one hand, they won't want for company."
   protag @ sad "On the other hand, that means they'll have a hard time finding their match."
-  show li surprise at hop
-  with Pause(0.25)
-  li "!"
+  li surprise right "!"
   li think "..."
   li neutral "Huh, that sounds... messy."
   protag @ sad "Yeah..."
   protag think "It seems like they'll be popular, especially during {b}spring{/b}."
   protag @ smile "Many people will find them charming and love them, I'm sure."
-  li @ blush "You think so?"
+  li @ blush right "You think so?"
   protag @ happy "Of course!"
   
   $ truthEnding += 1
@@ -72,11 +70,14 @@ label .desire():
 
   protag neutral "Your friend seems like they might find a potential match in many signs."
   protag "Among them are those born under the {b}rabbit{/b}, {b}dragon{/b}, and {b}snake{/b} signs."
-  li @ think "(Wait...)"
-  show li surprise at hop
+  li think right "(Wait...)"
   with Pause(0.25)
+  show li at right
+  show li surprise at hop
+  with Pause(1)
   li neutral @ think "Can I ask what sign you are?"
-  show protag surprise with hpunch
+  show protag surprise with hpunch:
+    xzoom -1.0
   with Pause(0.25)
   protag "Huh? Me?"
   protag neutral @ think "No one's ever asked that of me before..."
@@ -100,17 +101,17 @@ label .joke():
   protag @ closedeyes "..."
   protag @ stubborn "..."
   protag closedeyes @ sad "..."
-  li fear "?"
+  li fear right "?"
   li "What's wrong?"
   protag "..."
   protag neutral "There's a lot of bad luck involving birds."
-  li surprise "... Huh??"
+  li surprise right "... Huh??"
   protag @ stubborn "Your friend {i}needs{/i} to avoid birds, especially chickens."
   protag "It's imperative for their survival."
-  li fear "{b}Huh?{/b}"
+  li fear right "{b}Huh?{/b}"
   protag stubborn "Avoid pigeons too. Apparently those are also incredibly dangerous."
   protag "I once had a client who came to me because there were pigeons mating in front of their window everyday."
-  li "What?"
+  li right "What?"
   protag closedeyes "Anyway your friend is going to attract a lot of danger in their life. They need to be careful."
   
   $ jokeEnding += 1

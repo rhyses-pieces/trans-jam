@@ -6,10 +6,12 @@ label scene07():
     show protag closedeyes at center with dissolve
 
     $ play_sound(phone_ring)
-    with Pause(0.25)
+    with Pause(2)
 
     show protag at wag
+    with Pause(1)
     $ play_sound(phone_pickup)
+    with Pause(1)
 
     protag "Mmm... hello?"
 

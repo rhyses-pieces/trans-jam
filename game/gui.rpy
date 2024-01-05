@@ -18,6 +18,12 @@ init python:
 ## GUI Configuration Variables
 ################################################################################
 
+# Persistent options for accessibility
+default persistent.gui_font = "fonts/brassmono.ttf"
+default persistent.pref_text_size = 28
+#Used to determine what size font to use when changing font/size.
+default persistent.pref_text_scale = "regular"
+
 ## Colors ######################################################################
 ##
 ## The colors of text in the interface.
@@ -57,13 +63,13 @@ define gui.interface_text_color = '#a47767'
 define gui.text_font = persistent.gui_font
 
 ## The font used for character names.
-define gui.name_text_font = persistent.gui_font
+define gui.name_text_font = "fonts/brassmono.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = persistent.gui_font
+define gui.interface_text_font = "fonts/brassmono.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 28
+define gui.text_size = persistent.pref_text_size
 
 ## The size of character names.
 define gui.name_text_size = 36
@@ -208,7 +214,7 @@ define gui.choice_button_borders = Borders(100, 5, 100, 5)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cccccc"
+define gui.choice_button_text_idle_color = "#936656"
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
 

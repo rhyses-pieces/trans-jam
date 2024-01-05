@@ -30,7 +30,7 @@ label .truth():
     reaper sad "I don't know..."
     protag stubborn "You do. You absolutely do have hope."
     protag "You've proven to the heavens and hells - literally! - that you're exceptionally talented."
-    protag @ angry "It's their loss. Fuck them."
+    protag @ angry "It's their loss. Screw them."
 
     show reaper surprise at hop
     reaper "!"

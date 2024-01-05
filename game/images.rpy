@@ -29,7 +29,7 @@ layeredimage li:
         attribute neutral default
 
 image side li left = LayeredImageProxy('li', Transform(xalign = 0.0, zoom = 0.8, xzoom = -1.0))
-image side li right = LayeredImageProxy('li', Transform(xalign = 1.0, zoom = 0.8, xzoom = 1.0))
+image side li right = LayeredImageProxy('li', Transform(xcenter = 1.0, xalign = 1.0, zoom = 0.8, xzoom = 1.0))
 
 # protagonist
 layeredimage protag:

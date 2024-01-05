@@ -94,7 +94,8 @@ label scene10():
 
     $ play_sound(dooropen)
 
-    narrator "[reaper] takes her drink and makes a beeline for the exit. [protag] is left feeling confused, wondering about the strange change in her attitude."
+    narrator "[reaper] takes her drink and makes a beeline for the exit."
+    narrator "[protag] is left feeling confused, wondering about the strange change in her attitude."
     narrator "Meanwhile..."
 
     li "So uh... you guys seem close."

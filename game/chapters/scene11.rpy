@@ -6,11 +6,10 @@ label scene11():
     show protag at left with dissolve:
         xzoom -1.0
     show li at right with dissolve:
-        xzoom -1.0
+        xzoom 1.0
 
     narrator "After the two enter the backroom, {nw}"
     show protag happy at doublehop
-    with Pause(0.5)
     extend "[protag] begins explaining his tea leaf reading process."
     show protag neutral
     with Pause(0.25)
@@ -58,10 +57,11 @@ label scene11():
     protag @ think "Hmmm..."
     protag smile @ happy "Well, if you say so!"
 
-    narrator "The two of them enjoy their aromatic, subtly spiced drinks. When they're finished, [li] hands his empty cup to [protag]."
+    narrator "The two of them enjoy their aromatic, subtly spiced drinks."
+    narrator "When they're finished, [li] hands his empty cup to [protag]."
     show protag blush
     show li blush
-    extend "Their fingers slightly touch."
+    extend " Their fingers slightly touch."
     show protag neutral
     narrator "[protag] clears his throat before flipping [li]'s cup over."
 
